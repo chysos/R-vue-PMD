@@ -8,51 +8,80 @@
         :key="index"
         :prop="item.name"
       >
+
         <!--输入框-->
         <u-input
-          v-if="item.type === 1"
+          v-if="item.type === 'common_input'"
           v-model="form[item.name]"
           :placeholder="item.placeholder"
         />
         <u-input
-          v-if="item.type === 2"
+          v-if="item.type === 'password_input'"
+          v-model="form[item.name]"
+          :placeholder="item.placeholder"
+          :password-icon="item.passwordIcon"
+          type="password"
+        />
+        <u-input
+          v-if="item.type === 'range_calendar'"
           v-model="form[item.name]"
           :placeholder="item.placeholder"
           :disabled="true"
           @click="open_range_Calendar(item.name)"
         />
         <u-input
-          v-if="item.type === 3"
+          v-if="item.type === 'single_calendar'"
           v-model="form[item.name]"
           :placeholder="item.placeholder"
           :disabled="true"
           @click="open_date_Calendar(item.name)"
         />
         <u-input
-          v-if="item.type === 4"
+          v-if="item.type === 'time_picker'"
           v-model="form[item.name]"
           :placeholder="item.placeholder"
           :disabled="true"
           @click="open_time_picker(item.name)"
         />
         <u-input
-          v-if="item.type === 5"
+          v-if="item.type === 'single_select'"
           v-model="form[item.name]"
           :placeholder="item.placeholder"
           :disabled="true"
           @click="open_select(item.name)"
         />
         <u-input
-          v-if="item.type === 6"
+          v-if="item.type === 'single_select_child'"
           v-model="form[item.name]"
           :placeholder="item.placeholder"
           :disabled="true"
           @click="open_select_child(item.name)"
         />
+        <!--按钮事件-->
         <u-button
-          v-if="item.type === 7"
+          v-if="item.type === 'single_button'"
           @click="btn_click(item.name)"
-        >{{btn_name[item.name]}}</u-button>
+          >{{ btn_name[item.name] }}</u-button
+        >
+        <!--评分-->
+        <u-rate
+          v-if="item.type === 'common_rate'"
+          :count="item.count"
+          v-model="form[item.name]"
+        ></u-rate>
+        <u-radio-group v-if="item.type === 'radio'" v-model="form[item.name]">
+          <u-radio
+            v-for="(i, index) in item.list"
+            :key="index"
+            :name="i.name"
+            :disabled="item.disabled"
+          >
+            {{ i.name }}
+          </u-radio>
+        </u-radio-group>
+        <u-switch v-if="item.type === 'switch'" v-model="form[item.name]"></u-switch>
+        <u-slider class="r_slider" v-if="item.type === 'slider'" v-model="form[item.name]" :min="item.min" :max="item.max"></u-slider>
+        <u-number-box v-if="item.type === 'number-box'" v-model="form[item.name]"></u-number-box>
       </u-form-item>
     </u-form>
     <u-button @click="button_click">{{ button_title }}</u-button>
@@ -123,17 +152,23 @@ export default {
   },
   created() {
     this.list.forEach((e) => {
-      this.form[e.name] = e.value;
+      this.$set(this.form, e.name, e.value);
       this.rules[e.name] = e.rules;
-      if(e.type === 5) this.select_lists[e.name] = e.select_list
-      if(e.type === 6) {
-        this.select_parentName[e.name] = e.parentName
-        this.select_url[e.name] = e.url
-        this.select_funcs[e.name] = e.request_func
-      }
-      if(e.type === 7){
-        this.click_funcs[e.name] = e.click_func
-        this.btn_name[e.name] = e.btn_name
+      switch (e.type) {
+        case "single_select":
+          this.select_lists[e.name] = e.select_list;
+          break;
+        case "single_select_child":
+          this.select_parentName[e.name] = e.parentName;
+          this.select_url[e.name] = e.url;
+          this.select_funcs[e.name] = e.request_func;
+          break;
+        case "single_button":
+          this.click_funcs[e.name] = e.click_func;
+          this.btn_name[e.name] = e.btn_name;
+          break;
+        case "common_rate":
+          break;
       }
     });
   },
@@ -181,31 +216,47 @@ export default {
     },
     open_select(name) {
       this.select_temp = name;
-      this.select_list =  this.select_lists[name];
+      this.select_list = this.select_lists[name];
       //console.log(this.select_list)
       this.select_show = true;
     },
-    open_select_child(name){
+    open_select_child(name) {
       this.select_temp = name;
-      this.select_funcs[name](this,this.form[this.select_parentName[name]],(list)=>{
-        this.select_list = list
-        this.select_show = true
-      });
+      if (this.form[this.select_parentName[name]] === "")
+        this.$refs.Form_Toast.show({ title: "请先选择上一级" });
+      else
+        this.select_funcs[name](
+          this,
+          this.form[this.select_parentName[name]],
+          (list) => {
+            this.select_list = list;
+            this.select_show = true;
+          }
+        );
     },
     select_change(e) {
       this.form[this.select_temp] = e[0].label;
       this.obj_temp[this.select_temp] = e[0].value;
     },
-    btn_click(name){
+    btn_click(name) {
       this.click_funcs[name](this);
-    }
+    },
+  },
+  watch: {
+    form: {
+      handler(newName, oldName) {
+        this.$emit("update:form", this.form);
+      },
+      immediate: true,
+      deep: true,
+    },
   },
   mounted() {
     this.$refs[this.form_ref].setRules(this.rules);
   },
   data() {
     return {
-      obj_temp:{},
+      obj_temp: {},
       form: {},
       rules: {},
       range_calendar: false,
@@ -222,15 +273,15 @@ export default {
       time_picker_show: false,
       time_picker_temp: "",
       select_show: false,
-      select_temp:"",
-      select_list:[],
-      select_lists:{},
-      select_parentName:{},
-      select_url:{},
-      select_funcs:{},
-      click_funcs:{},
-      btn_name:{},
-      click_obj:{}
+      select_temp: "",
+      select_list: [],
+      select_lists: {},
+      select_parentName: {},
+      select_url: {},
+      select_funcs: {},
+      click_funcs: {},
+      btn_name: {},
+      click_obj: {},
     };
   },
 };
@@ -241,5 +292,9 @@ export default {
   color: rgb(121, 121, 121);
   text-align: center;
   padding: 20rpx 0 0 0;
+}
+.r_slider{
+  padding: 30rpx;
+  width: 300rpx;
 }
 </style>

@@ -1,245 +1,296 @@
 <template>
-  <view>
-    <u-form :model="form" :ref="form_ref" :rules="rules">
-      <u-form-item
-        label-width="auto"
-        :label="item.label"
-        v-for="(item, index) in list"
-        :key="index"
-        :prop="item.name"
-      >
-        <!--输入框-->
-        <u-input
-          v-if="item.type === 1"
-          v-model="form[item.name]"
-          :placeholder="item.placeholder"
-        />
-        <u-input
-          v-if="item.type === 2"
-          v-model="form[item.name]"
-          :placeholder="item.placeholder"
-          :disabled="true"
-          @click="open_range_Calendar(item.name)"
-        />
-        <u-input
-          v-if="item.type === 3"
-          v-model="form[item.name]"
-          :placeholder="item.placeholder"
-          :disabled="true"
-          @click="open_date_Calendar(item.name)"
-        />
-        <u-input
-          v-if="item.type === 4"
-          v-model="form[item.name]"
-          :placeholder="item.placeholder"
-          :disabled="true"
-          @click="open_time_picker(item.name)"
-        />
-        <u-input
-          v-if="item.type === 5"
-          v-model="form[item.name]"
-          :placeholder="item.placeholder"
-          :disabled="true"
-          @click="open_select(item.name)"
-        />
-        <u-input
-          v-if="item.type === 6"
-          v-model="form[item.name]"
-          :placeholder="item.placeholder"
-          :disabled="true"
-          @click="open_select_child(item.name)"
-        />
-        <u-button
-          v-if="item.type === 7"
-          @click="btn_click(item.name)"
-        >{{btn_name[item.name]}}</u-button>
-      </u-form-item>
-    </u-form>
-    <u-button @click="button_click">{{ button_title }}</u-button>
-    <!--跨度日历-->
-    <u-calendar
-      v-model="range_calendar"
-      mode="range"
-      max-date="2100-01-01"
-      @change="range_change"
-    >
-      <view slot="tooltip">
-        <view class="title">请选择开始和结束时间</view>
-      </view>
-    </u-calendar>
-    <!--单天日历-->
-    <u-calendar
-      v-model="date_calendar"
-      mode="date"
-      max-date="2100-01-01"
-      @change="date_change"
-    >
-      <view slot="tooltip">
-        <view class="title">请选择时间</view>
-      </view>
-    </u-calendar>
-    <!--日历选择器-->
-    <u-picker
-      mode="time"
-      v-model="time_picker_show"
-      :params="time_picker_params"
-      @confirm="time_picker_change"
-    ></u-picker>
-    <u-select
-      v-model="select_show"
-      mode="single-column"
-      :list="select_list"
-      @confirm="select_change"
-    ></u-select>
-    <u-toast ref="Form_Toast" />
+  <view class="content">
+    <view>
+      <text class="title">form:{{ form }}</text>
+      <r-form
+        :list="option"
+        @get_form_data="get_form_data"
+        :form_ref="$u.guid()"
+        :form.sync="form"
+      ></r-form>
+    </view>
   </view>
 </template>
 
 <script>
-/**
- * {
- * type:1,
- * label:'',
- * name:'',
- * value:'',
- * rule:[]
- * }
- */
+import RForm from "@/pages/form/R-form.vue";
+//import {R_form} from '@/compoments/R-form';
 export default {
-  props: {
-    list: {
-      type: Array,
-      required: true,
-    },
-    form_ref: {
-      type: String,
-      required: true,
-    },
-    button_title: {
-      type: String,
-      require: false,
-      default: "提交",
-    },
-  },
-  created() {
-    this.list.forEach((e) => {
-      this.form[e.name] = e.value;
-      this.rules[e.name] = e.rules;
-      if(e.type === 5) this.select_lists[e.name] = e.select_list
-      if(e.type === 6) {
-        this.select_parentName[e.name] = e.parentName
-        this.select_url[e.name] = e.url
-        this.select_funcs[e.name] = e.request_func
-      }
-      if(e.type === 7){
-        this.click_funcs[e.name] = e.click_func
-        this.btn_name[e.name] = e.btn_name
-      }
-    });
-  },
-  methods: {
-    button_click() {
-      this.$refs[this.form_ref].validate((valid) => {
-        if (valid) {
-          this.$emit("get_form_data", this.form);
-        } else {
-          console.log("验证失败");
-        }
-      });
-    },
-    open_range_Calendar(name) {
-      this.calendar_temp = name;
-      this.range_calendar = true;
-    },
-    open_date_Calendar(name) {
-      this.calendar_temp = name;
-      this.date_calendar = true;
-    },
-    range_change(e) {
-      this.form[this.calendar_temp] = e.startDate + "-" + e.endDate;
-    },
-    date_change(e) {
-      this.form[this.calendar_temp] = e.result;
-    },
-    time_picker_change(e) {
-      this.form[this.time_picker_temp] =
-        e.year +
-        "-" +
-        e.month +
-        "-" +
-        e.day +
-        " " +
-        e.hour +
-        ":" +
-        e.minute +
-        ":" +
-        e.second;
-    },
-    open_time_picker(name) {
-      this.time_picker_temp = name;
-      this.time_picker_show = true;
-    },
-    open_select(name) {
-      this.select_temp = name;
-      this.select_list =  this.select_lists[name];
-      //console.log(this.select_list)
-      this.select_show = true;
-    },
-    open_select_child(name){
-      this.select_temp = name;
-      this.select_funcs[name](this,this.form[this.select_parentName[name]],(list)=>{
-        this.select_list = list
-        this.select_show = true
-      });
-    },
-    select_change(e) {
-      this.form[this.select_temp] = e[0].label;
-      this.obj_temp[this.select_temp] = e[0].value;
-    },
-    btn_click(name){
-      this.click_funcs[name](this);
-    }
-  },
-  mounted() {
-    this.$refs[this.form_ref].setRules(this.rules);
+  components: {
+    RForm,
   },
   data() {
     return {
-      obj_temp:{},
       form: {},
-      rules: {},
-      range_calendar: false,
-      date_calendar: false,
-      calendar_temp: "",
-      time_picker_params: {
-        year: true,
-        month: true,
-        day: true,
-        hour: true,
-        minute: true,
-        second: true,
-      },
-      time_picker_show: false,
-      time_picker_temp: "",
-      select_show: false,
-      select_temp:"",
-      select_list:[],
-      select_lists:{},
-      select_parentName:{},
-      select_url:{},
-      select_funcs:{},
-      click_funcs:{},
-      btn_name:{},
-      click_obj:{}
+      title: "Hello R-vue",
+      option: [
+        {
+          type: 'number-box',
+          label: '数字',
+          name: 'my-number-box',
+          value: 25
+        },
+        {
+          type: 'slider',
+          label: "滑块：",
+          max:'100',
+          min:'0',
+          step:'20',
+          name: 'my-slider',
+          value: 0
+        },
+        {
+          type: "common_input",
+          label: "普通输入框",
+          name: "number",
+          value: "",
+          placeholder: "请输入普通输入框",
+          rules: [
+            {
+              required: true,
+              message: "请输普通输入框",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+            {
+              min: 5,
+              message: "普通输入框不能少于5个字",
+              trigger: "change,blur",
+            },
+          ],
+        },
+        {
+          type: "time_picker",
+          label: "时间选择器",
+          name: "createTime",
+          placeholder: "单击开始时间选择器",
+          value: "",
+          rules: [
+            {
+              required: true,
+              message: "请输入时间",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+          ],
+        },
+        {
+          type: "single_select",
+          label: "单个选择框（母框）",
+          name: "type",
+          select_list: [
+            {
+              value: "0",
+              label: "第一个对象",
+            },
+            {
+              value: "1",
+              label: "第二个对象",
+            },
+          ],
+          placeholder: "单击选择设备类型",
+          value: "",
+          rules: [
+            {
+              required: true,
+              message: "请选择设备类型",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+          ],
+        },
+        {
+          type: "single_select_child",
+          label: "单个选择框（子框）",
+          name: "equipmentNum_name",
+          parentName: "type",
+          // context:子组件上下文
+          // obj:母选择器值
+          //单击时触发：callback :回调函数携带返回一个obj对象
+          request_func: (context, obj, callback) => {
+            let list = [];
+            console.log(obj);
+            setTimeout(() => {
+              for (let i in [1, 2, 3, 4, 5]) {
+                let obj2 = {
+                  label: obj + "的子对象",
+                  value: obj + "的子对象",
+                };
+                list.push(obj2);
+              }
+              callback(list);
+            }, 500);
+          },
+          select_list: [],
+          placeholder: "单击选择设备",
+          value: "",
+          rules: [
+            {
+              required: true,
+              message: "请选择设备",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+          ],
+        },
+        {
+          type: "single_button",
+          label: "简单的按钮",
+          name: "select_component",
+          click_func: (context) => {
+            context.$refs.Form_Toast.show({
+              title: "这是单击事件",
+            });
+          },
+          btn_name: "单击简单的按钮",
+        },
+        {
+          type: "password_input",
+          label: "密码",
+          name: "password_input",
+          value: "",
+          placeholder: "请输入密码",
+          rules: [
+            {
+              required: true,
+              message: "请输入工单编号",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+            {
+              min: 5,
+              message: "密码不能少于5个字",
+              trigger: "change,blur",
+            },
+          ],
+          passwordIcon: true, //是否显示查看密码
+        },
+        {
+          type: "common_input",
+          label: "姓名",
+          name: "login_name",
+          value: "",
+          placeholder: "请输入姓名",
+          rules: [
+            {
+              required: true,
+              message: "请输入姓名",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+            {
+              min: 2,
+              message: "姓名不能少于2个字",
+              trigger: "change,blur",
+            },
+          ],
+        },
+        {
+          type: "range_calendar",
+          label: "范围性的日历",
+          name: "rangeCalendar",
+          value: "",
+          placeholder: "请输入日历起始与截止时间",
+          rules: [
+            {
+              required: true,
+              message: "请输入日历起始与截止时间",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+          ],
+        },
+        {
+          type: "single_calendar",
+          label: "单选日历",
+          name: "singleCalendar",
+          value: "",
+          placeholder: "请输入日历",
+          rules: [
+            {
+              required: true,
+              message: "请输入时间",
+              // 可以单个或者同时写两个触发验证方式
+              trigger: "blur,change",
+            },
+          ],
+        },
+        {
+          type: "common_rate",
+          label: "评分",
+          name: "common_rate",
+          count: 12,
+          value: 6,
+        },
+        {
+          type: "radio",
+          label: "单选框",
+          name:'my-radio',
+          value:'apple',
+          list: [
+            {
+              name: "apple",
+              disabled: true,
+            },
+            {
+              name: "banner",
+              disabled: false,
+            },
+            {
+              name: "orange",
+              disabled: false,
+            },
+            {
+              name: "watermelon",
+              disabled: false,
+            },
+            {
+              name: "peach",
+              disabled: false,
+            },
+            {
+              name: "admin",
+              disabled: false,
+            }
+          ],
+        },
+        {
+          type: 'switch',
+          label: "开关",
+          name: 'my-switch',
+          value: true
+        },
+      ],
     };
+  },
+  onLoad() {},
+  methods: {
+    get_form_data(form_data) {
+      this.form_data = form_data;
+      console.log(this.form_data);
+    },
   },
 };
 </script>
 
 <style>
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+
+.text-area {
+  display: flex;
+  justify-content: center;
+}
+
 .title {
-  color: rgb(121, 121, 121);
-  text-align: center;
-  padding: 20rpx 0 0 0;
+  font-size: 15rpx;
+  color: #8f8f94;
 }
 </style>

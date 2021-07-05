@@ -8,6 +8,24 @@
 			"style": {
 				"navigationBarTitleText": "R-vue"
 			}
+		},
+		{
+			"path": "pages/form/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-form"
+			}
+		},
+		{
+			"path": "pages/grid/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-grid"
+			}
+		},
+		{
+			"path":"pages/cell/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-cell"
+			}
 		}
 	],
 	"globalStyle": {
