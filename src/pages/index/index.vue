@@ -13,11 +13,17 @@
         value="查看"
         @click="viewGrid"
       ></u-cell-item>
-	  <u-cell-item
+      <u-cell-item
         icon="integral-fill"
-        title="R-vue-cell"
+        title="R-vue-列表"
         value="查看"
         @click="viewCell"
+      ></u-cell-item>
+      <u-cell-item
+        icon="integral-fill"
+        title="R-vue-卡片"
+        value="查看"
+        @click="viewCard"
       ></u-cell-item>
     </u-cell-group>
   </view>
@@ -31,44 +37,30 @@ export default {
   methods: {
     viewForm() {
       this.$u.route({
-        url: "pages/form/index"
+        url: "pages/form/index",
       });
     },
     viewGrid() {
       this.$u.route({
-        url: "pages/grid/index"
+        url: "pages/grid/index",
       });
     },
-	viewCell() {
+    viewCell() {
       this.$u.route({
-        url: "pages/cell/index"
+        url: "pages/cell/index",
+      });
+    },
+    viewCard() {
+      this.$u.route({
+        url: "pages/card/index",
       });
     },
   },
 };
 </script>
 
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin: 200rpx auto 50rpx auto;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 15rpx;
-  color: #8f8f94;
+<style lang="scss">
+.content{
+  background-color: $u-bg-color
 }
 </style>

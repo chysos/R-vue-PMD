@@ -13,13 +13,31 @@ export default {
           type: 'common_cell',
           title: "名称",
           value: "数值",
-          arrow: true
+          arrow: true,
+          arrow_direction: 'down'
+        },
+        {
+          type: 'tags',
+          title: "标签",
+          list:[
+            {
+              text:'plain',
+              mode:'plain'
+            },{
+              text:'dark',
+              mode: 'dark'
+            },{
+              text: 'light',
+              mode: 'light'
+            }
+          ]
         },
         {
           type: 'radio',
           title: "单选（是，否）",
           value: "是",
           arrow: false,
+          arrow_direction:'up',
           conf: [
             {
               name: "是",
@@ -34,7 +52,7 @@ export default {
               disabled: true,
             },
             {
-              name: "第三个",
+              name: "第4个",
               disabled: true,
             },
           ],

@@ -2,6 +2,7 @@
   <view>
     <r-grid :option="option"></r-grid>
     <text class="title">option:{{ option }}</text>
+    <u-toast ref="R_grid" />
   </view>
 </template>
 
@@ -23,7 +24,7 @@ export default {
               count: 22,
             },
             click: () => {
-              console.log("单击事件");
+              this.$refs.R_grid.show({title: this.option.list[0].label+'被单击'})
             },
           },
           {
@@ -35,7 +36,7 @@ export default {
               count: 22,
             },
             click: () => {
-              console.log("单击事件");
+              this.$refs.R_grid.show({title: this.option.list[1].label+'被单击'})
             },
           },
           {
@@ -47,7 +48,7 @@ export default {
               count: 22,
             },
             click: () => {
-              console.log("单击事件");
+              this.$refs.R_grid.show({title: this.option.list[2].label+'被单击'})
             },
           },
           {
@@ -59,7 +60,7 @@ export default {
               count: 22,
             },
             click: () => {
-              console.log(this);
+             this.$refs.R_grid.show({title: this.option.list[3].label+'被单击'})
             },
           },
           {
@@ -71,7 +72,7 @@ export default {
               count: 21,
             },
             click: () => {
-              console.log(this);
+              this.$refs.R_grid.show({title: this.option.list[4].label+'被单击'})
             },
           },
         ],

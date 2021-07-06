@@ -1,7 +1,7 @@
 <template>
   <view class="content">
     <view>
-      <text class="title">form:{{ form }}</text>
+      <text class="title">form:{{ form_data }}</text>
       <r-form
         :list="option"
         @get_form_data="get_form_data"
@@ -18,6 +18,11 @@ import RForm from "@/pages/form/R-form.vue";
 export default {
   components: {
     RForm,
+  },
+  computed:{
+	form_data(){
+		return JSON.stringify(this.form);
+	}  
   },
   data() {
     return {
@@ -274,23 +279,12 @@ export default {
 </script>
 
 <style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 3%;
-  margin-bottom: 3%;
-}
-
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
 
 .title {
-  font-size: 15rpx;
+  font-size: 10rpx;
   color: #8f8f94;
+  height: 300rpx;
+  width: 100rpx;
+  padding: 30rpx 30rpx 30rpx 30rpx;
 }
 </style>

@@ -26,6 +26,12 @@
 			"style": {
 				"navigationBarTitleText": "R-vue-cell"
 			}
+		},
+		{
+			"path":"pages/card/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-card"
+			}
 		}
 	],
 	"globalStyle": {
