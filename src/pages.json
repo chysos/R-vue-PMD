@@ -38,6 +38,12 @@
 			"style": {
 				"navigationBarTitleText": "R-vue-dropdown"
 			}
+		},
+		{
+			"path":"pages/tabs/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-tabs"
+			}
 		}
 	],
 	"globalStyle": {

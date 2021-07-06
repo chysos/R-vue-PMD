@@ -31,6 +31,12 @@
         value="查看"
         @click="viewDropdown"
       ></u-cell-item>
+      <u-cell-item
+        icon="integral-fill"
+        title="R-vue-标签页"
+        value="查看"
+        @click="viewTabs"
+      ></u-cell-item>
     </u-cell-group>
   </view>
 </template>
@@ -64,6 +70,11 @@ export default {
     viewDropdown(){
       this.$u.route({
         url:"pages/dropdown/index",
+      })
+    },
+    viewTabs(){
+      this.$u.route({
+        url:"pages/tabs/index",
       })
     }
   },
