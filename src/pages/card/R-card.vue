@@ -32,6 +32,7 @@
         </view>
       </view>
       <view class="u-foot" slot="foot"
+      @click="item.foot.press"
         ><u-icon
           name="chat-fill"
           size="34"

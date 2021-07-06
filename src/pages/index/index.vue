@@ -25,6 +25,12 @@
         value="查看"
         @click="viewCard"
       ></u-cell-item>
+      <u-cell-item
+        icon="integral-fill"
+        title="R-vue-下拉菜单"
+        value="查看"
+        @click="viewDropdown"
+      ></u-cell-item>
     </u-cell-group>
   </view>
 </template>
@@ -55,6 +61,11 @@ export default {
         url: "pages/card/index",
       });
     },
+    viewDropdown(){
+      this.$u.route({
+        url:"pages/dropdown/index",
+      })
+    }
   },
 };
 </script>

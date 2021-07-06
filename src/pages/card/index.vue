@@ -53,7 +53,10 @@ export default {
             },
           ],
           foot:{
-              label:'5评论'
+              label:'5评论',
+              press: () => {
+                   this.$refs.R_card.show({title:'评论框被单击'})
+              },
           }
         },
         {
@@ -94,9 +97,19 @@ export default {
                   this.$refs.R_card.show({title: this.option[1].body[1].text+'被单击'})
               },
             },
+            {
+              text: "7月5日下午，中国排协网站公布中国女排东京奥运12人参赛名单。朱婷担任球队队长，张常宁、李盈莹和刘晓彤为球队主攻",
+              imgUrl:require("@/static/icons/4.jpg"),
+              press: () => {
+                   this.$refs.R_card.show({title: this.option[1].body[2].text+'被单击'})
+              },
+            }
           ],
           foot:{
-              label:'13评论'
+              label:'13评论',
+              press: () => {
+                   this.$refs.R_card.show({title:'评论框被单击'})
+              },
           }
         }
       ],

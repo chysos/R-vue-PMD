@@ -32,6 +32,12 @@
 			"style": {
 				"navigationBarTitleText": "R-vue-card"
 			}
+		},
+		{
+			"path":"pages/dropdown/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-dropdown"
+			}
 		}
 	],
 	"globalStyle": {
