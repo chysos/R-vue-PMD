@@ -56,6 +56,24 @@
 			"style": {
 				"navigationBarTitleText": "R-vue-subsection"
 			}
+		},
+		{
+			"path":"pages/steps/index",
+			"style":{
+				"navigationBarTitleText": "R-vue-steps"
+			}
+		},
+		{
+			"path":"pages/readmore/index",
+			"style":{
+				"navigationBarTitleText": "R-vue-readmore"
+			}
+		},
+		{
+			"path":"pages/timeline/index",
+			"style":{
+				"navigationBarTitleText": "R-vue-timeline"
+			}
 		}
 	],
 	"globalStyle": {

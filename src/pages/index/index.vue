@@ -100,6 +100,39 @@ export default {
           press:()=>{
             this.viewSubsection()
           }
+        },
+        {
+          icon:'integral-fill',
+          type: 'common_cell',
+          title: 'R-vue-步骤条',
+          value:"查看",
+          arrow:true,
+          arrow_direction:'down',
+          press:()=>{
+            this.viewSteps()
+          }
+        },
+        {
+          icon:'integral-fill',
+          type: 'common_cell',
+          title: 'R-vue-查看更多',
+          value:"查看",
+          arrow:true,
+          arrow_direction:'down',
+          press:()=>{
+            this.viewReadmore()
+          }
+        },
+        {
+          icon:'integral-fill',
+          type: 'common_cell',
+          title: 'R-vue-时间轴',
+          value:"查看",
+          arrow:true,
+          arrow_direction:'down',
+          press:()=>{
+            this.viewTimeLine()
+          }
         }
       ]
     };
@@ -143,6 +176,21 @@ export default {
     viewSubsection(){
       this.$u.route({
         url:"pages/subsection/index",
+      })
+    },
+    viewSteps(){
+      this.$u.route({
+        url:"pages/steps/index"
+      })
+    },
+    viewReadmore(){
+      this.$u.route({
+        url:"pages/readmore/index"
+      })
+    },
+    viewTimeLine(){
+      this.$u.route({
+        url:"pages/timeline/index"
       })
     }
   },
