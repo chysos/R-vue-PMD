@@ -1,50 +1,108 @@
 <template>
   <view class="content">
-    <u-cell-group>
-      <u-cell-item
-        icon="setting-fill"
-        title="R-vue 表单"
-        value="查看"
-        @click="viewForm"
-      ></u-cell-item>
-      <u-cell-item
-        icon="integral-fill"
-        title="R-vue宫格"
-        value="查看"
-        @click="viewGrid"
-      ></u-cell-item>
-      <u-cell-item
-        icon="integral-fill"
-        title="R-vue-列表"
-        value="查看"
-        @click="viewCell"
-      ></u-cell-item>
-      <u-cell-item
-        icon="integral-fill"
-        title="R-vue-卡片"
-        value="查看"
-        @click="viewCard"
-      ></u-cell-item>
-      <u-cell-item
-        icon="integral-fill"
-        title="R-vue-下拉菜单"
-        value="查看"
-        @click="viewDropdown"
-      ></u-cell-item>
-      <u-cell-item
-        icon="integral-fill"
-        title="R-vue-标签页"
-        value="查看"
-        @click="viewTabs"
-      ></u-cell-item>
-    </u-cell-group>
+    <r-cell :list="option"></r-cell>
+    <r-qrcode></r-qrcode>
   </view>
 </template>
 
 <script>
+import RQrcode from '@/components/R-Qrcode.vue';
+import RCell from '../cell/R-cell.vue';
 export default {
+  components: { RCell, RQrcode },
   data() {
-    return {};
+    return {
+      option:[
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-表单",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewForm()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-宫格",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewGrid()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-列表",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewCell()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-卡片",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewCard()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-下拉菜单",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewDropdown()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-标签页",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewTabs()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-轮播图 ",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewSwiper()
+          }
+        },
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-分段器 ",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewSubsection()
+          }
+        }
+      ]
+    };
   },
   methods: {
     viewForm() {
@@ -75,6 +133,16 @@ export default {
     viewTabs(){
       this.$u.route({
         url:"pages/tabs/index",
+      })
+    },
+    viewSwiper(){
+      this.$u.route({
+        url:"pages/swiper/index",
+      })
+    },
+    viewSubsection(){
+      this.$u.route({
+        url:"pages/subsection/index",
       })
     }
   },

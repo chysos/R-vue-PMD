@@ -14,7 +14,10 @@ export default {
           title: "名称",
           value: "数值",
           arrow: true,
-          arrow_direction: 'down'
+          arrow_direction: 'down',
+          press:()=>{
+
+          }
         },
         {
           type: 'tags',
@@ -30,7 +33,10 @@ export default {
               text: 'light',
               mode: 'light'
             }
-          ]
+          ],
+          press:()=>{
+            
+          }
         },
         {
           type: 'radio',
@@ -56,6 +62,9 @@ export default {
               disabled: true,
             },
           ],
+          press:()=>{
+            
+          }
         }
       ],
     };

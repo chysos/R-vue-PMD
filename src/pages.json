@@ -22,27 +22,39 @@
 			}
 		},
 		{
-			"path":"pages/cell/index",
+			"path": "pages/cell/index",
 			"style": {
 				"navigationBarTitleText": "R-vue-cell"
 			}
 		},
 		{
-			"path":"pages/card/index",
+			"path": "pages/card/index",
 			"style": {
 				"navigationBarTitleText": "R-vue-card"
 			}
 		},
 		{
-			"path":"pages/dropdown/index",
+			"path": "pages/dropdown/index",
 			"style": {
 				"navigationBarTitleText": "R-vue-dropdown"
 			}
 		},
 		{
-			"path":"pages/tabs/index",
+			"path": "pages/tabs/index",
 			"style": {
 				"navigationBarTitleText": "R-vue-tabs"
+			}
+		},
+		{
+			"path": "pages/swiper/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-swiper"
+			}
+		},
+		{
+			"path": "pages/subsection/index",
+			"style": {
+				"navigationBarTitleText": "R-vue-subsection"
 			}
 		}
 	],
