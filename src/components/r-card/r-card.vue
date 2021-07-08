@@ -46,7 +46,7 @@
 
 <script>
 export default {
-  name:'RCard',
+  name:'r-card',
   props: {
     option: {
       type: Array,
