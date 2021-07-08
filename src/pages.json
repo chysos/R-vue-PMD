@@ -74,6 +74,12 @@
 			"style":{
 				"navigationBarTitleText": "R-vue-timeline"
 			}
+		},
+		{
+			"path":"pages/me/index",
+			"style":{
+				"navigationBarTitleText": "R-vue-me"
+			}
 		}
 	],
 	"globalStyle": {

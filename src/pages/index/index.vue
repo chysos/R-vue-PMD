@@ -133,6 +133,17 @@ export default {
           press:()=>{
             this.viewTimeLine()
           }
+        },
+        {
+          icon:'integral-fill',
+          type: 'common_cell',
+          title: 'R-vue-我的',
+          value:"查看",
+          arrow:true,
+          arrow_direction:'down',
+          press:()=>{
+            this.viewMe()
+          }
         }
       ]
     };
@@ -191,6 +202,11 @@ export default {
     viewTimeLine(){
       this.$u.route({
         url:"pages/timeline/index"
+      })
+    },
+    viewMe(){
+      this.$u.route({
+        url:"pages/me/index"
       })
     }
   },

@@ -1,31 +1,22 @@
 <template>
   <u-time-line class="timeline-content">
-    <u-time-line-item nodeTop="2">
-      <!-- 此处自定义了左边内容，用一个图标替代 -->
-      <template v-slot:node>
-        <view class="u-node" style="background: #19be6b">
-          <!-- 此处为uView的icon组件 -->
-          <u-icon name="pushpin-fill" color="#fff" :size="24"></u-icon>
+    <u-time-line-item nodeTop="2" v-for="(item,index) in option.list" :key="index">
+      <template v-slot:node v-if="item.title || item.icon || index <= option.current">
+        <view v-if="index <= option.current && item.icon!=undefined" class="u-node" :style="option.active_node_style">
+          <u-icon :name="item.icon" color="#fff" :size="24"></u-icon>
+        </view>
+        <view v-if="index <= option.current && item.icon===undefined" class="u-node-1" :style="option.active_node_style"></view>
+        <view v-if="index > option.current && item.icon!=undefined" class="u-node">
+          <u-icon :name="item.icon" color="#fff" :size="24"></u-icon>
         </view>
       </template>
       <template v-slot:content>
         <view>
-          <view class="u-order-title">待取件</view>
+          <view class="u-order-title" v-if="item.title">{{item.title}}</view>
           <view class="u-order-desc"
-            >[自提柜]您的快件已放在楼下侧门，直走前方53.6米，左拐约10步，再右拐直走，见一红灯笼停下，叩门三下，喊“芝麻开门”即可。</view
+            >{{item.body}}</view
           >
-          <view class="u-order-time">2019-05-08 12:12</view>
-        </view>
-      </template>
-    </u-time-line-item>
-    <u-time-line-item>
-      <!-- 此处没有自定义左边的内容，会默认显示一个点 -->
-      <template v-slot:content>
-        <view>
-          <view class="u-order-desc"
-            >【深圳市】日照香炉生紫烟，遥看瀑布挂前川，飞流直下三千尺，疑是银河落九天。</view
-          >
-          <view class="u-order-time">2019-12-06 22:30</view>
+          <view class="u-order-time">{{item.time}}</view>
         </view>
       </template>
     </u-time-line-item>
@@ -56,7 +47,15 @@ export default {
   align-items: center;
   background: #d0d0d0;
 }
-
+.u-node-1{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d0d0d0;
+}
 .u-order-title {
   color: #333333;
   font-weight: bold;
