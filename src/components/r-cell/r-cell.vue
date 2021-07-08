@@ -19,7 +19,6 @@
       >
         <u-radio-group v-model="item.value">
           <u-radio
-            @change="radioChange"
             v-for="(u_item, index) in item.conf"
             :key="index"
             :name="u_item.name"
@@ -46,7 +45,7 @@
 
 <script>
 export default {
-  name:'RCell',
+  name:'r-cell',
   data() {
     return {};
   },

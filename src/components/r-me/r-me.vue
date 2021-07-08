@@ -25,7 +25,7 @@
 <script>
 
 export default {
-  name:'RMe',
+  name:'r-me',
   props: {
     option: {
       type: Object,

@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name:'RGrid',
+  name:'r-grid',
   props: {
     option: {
       type: Object,

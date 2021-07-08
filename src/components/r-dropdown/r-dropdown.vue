@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name:'RDropdown',
+  name:'r-dropdown',
   props: {
     option: {
       type: Object,

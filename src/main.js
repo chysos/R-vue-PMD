@@ -4,20 +4,15 @@ import App from './App'
 import uView from "uview-ui";
 import * as echarts from 'echarts';
 
-
-import RVue from './components'
-// 注册组件库
-Vue.use(RVue)
-
-
 import cuHeader from '../colorui/components/cu-header.vue'
-Vue.component('cu-header',cuHeader)
+import RVue from './components'
 
+Vue.use(RVue)
 
 Vue.config.productionTip = false
 Vue.use(uView);
 Vue.prototype.$echarts = echarts;
-
+//Vue.use(RVue)
 App.mpType = 'app'
 
 const app = new Vue({

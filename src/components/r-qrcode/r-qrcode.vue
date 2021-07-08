@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name:'RQrcode',
+  name:'r-qrcode',
   methods: {
     scan() {
       uni.scanCode({
