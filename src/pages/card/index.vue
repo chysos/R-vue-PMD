@@ -6,9 +6,7 @@
 </template>
 
 <script>
-import RCard from "../../components/single_comp/R-card.vue";
 export default {
-  components: { RCard },
   data() {
     return {
       option: [

@@ -1,15 +1,11 @@
 <template>
   <view class="content">
     <r-cell :list="option"></r-cell>
-    <r-qrcode></r-qrcode>
   </view>
 </template>
 
 <script>
-import RQrcode from '@/components/R-Qrcode.vue';
-import RCell from '../../components/data/R-cell.vue';
 export default {
-  components: { RCell, RQrcode },
   data() {
     return {
       option:[

@@ -3,9 +3,7 @@
 </template>
 
 <script>
-import RMe from "../../components/templates/R-me.vue";
 export default {
-  components: { RMe },
   data() {
     return {
       option: {

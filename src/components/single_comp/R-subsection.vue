@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name:'RSubsection',
   methods: {
     change(index) {
       this.option.current = index;

@@ -3,9 +3,7 @@
 </template>
 
 <script>
-import RTimeline from "../../components/single_comp/R-timeline.vue";
 export default {
-  components: { RTimeline },
   data() {
     return {
       option: {

@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name:'RTimeline',
   props: {
     option: {
       type: Object,

@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name:'RSteps',
   props: {
     option: {
       type: Object,

@@ -24,6 +24,7 @@
 
 <script>
 export default {
+  name:'RTabs',
   props: {
     option: {
       type: Object,

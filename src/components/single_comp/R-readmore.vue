@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name:'RReadmore',
   props: {
     option: {
       type: Object,

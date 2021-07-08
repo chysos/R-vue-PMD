@@ -23,10 +23,9 @@
 </template>
 
 <script>
-import RCell from "@/components/data/R-cell.vue";
 
 export default {
-  components: { RCell },
+  name:'RMe',
   props: {
     option: {
       type: Object,
