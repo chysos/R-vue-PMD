@@ -6,9 +6,7 @@
 </template>
 
 <script>
-import RSubsection from "../../components/single_comp/R-subsection.vue";
 export default {
-  components: { RSubsection },
   data() {
     return {
       option2: {

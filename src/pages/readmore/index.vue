@@ -3,9 +3,7 @@
 </template>
 
 <script>
-import RReadmore from "@/components/single_comp/R-readmore.vue";
 export default {
-  components: { RReadmore },
   data() {
     return {
       option: {

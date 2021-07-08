@@ -14,10 +14,7 @@
 </template>
 
 <script>
-import RSubsection from "../../components/single_comp/R-subsection.vue";
-import RSwiper from "../../components/single_comp/R-swiper.vue";
 export default {
-  components: { RSwiper, RSubsection },
   watch: {
     "subsection_option.current_value"(val, oldval) {
       this.option.interval = val;
