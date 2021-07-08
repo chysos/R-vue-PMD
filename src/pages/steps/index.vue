@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import RSteps from "./R-steps.vue";
+import RSteps from "../../components/single_comp/R-steps.vue";
 export default {
   components: { RSteps },
   data() {

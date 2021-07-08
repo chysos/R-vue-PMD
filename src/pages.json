@@ -80,6 +80,12 @@
 			"style":{
 				"navigationBarTitleText": "R-vue-me"
 			}
+		},
+		{
+			"path":"pages/native/index",
+			"style":{
+				"navigationBarTitleText":"R-vue-native"
+			}
 		}
 	],
 	"globalStyle": {

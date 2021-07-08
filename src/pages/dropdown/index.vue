@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import RDropdown from "./R-dropdown.vue";
+import RDropdown from "../../components/single_comp/R-dropdown.vue";
 export default {
   components: { RDropdown },
   data() {

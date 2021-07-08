@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import RGrid from "./R-grid.vue";
+import RGrid from "../../components/single_comp/R-grid.vue";
 export default {
   components: { RGrid },
   data() {

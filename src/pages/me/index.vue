@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RMe from "./R-me.vue";
+import RMe from "../../components/templates/R-me.vue";
 export default {
   components: { RMe },
   data() {

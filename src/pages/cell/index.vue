@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RCell from "./R-cell.vue";
+import RCell from "../../components/data/R-cell.vue";
 export default {
   components: { RCell },
   data() {

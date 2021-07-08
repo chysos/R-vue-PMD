@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import RForm from "@/pages/form/R-form.vue";
+import RForm from "@/components/forms/R-form.vue";
 //import {R_form} from '@/compoments/R-form';
 export default {
   components: {

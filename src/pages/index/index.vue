@@ -7,7 +7,7 @@
 
 <script>
 import RQrcode from '@/components/R-Qrcode.vue';
-import RCell from '../cell/R-cell.vue';
+import RCell from '../../components/data/R-cell.vue';
 export default {
   components: { RCell, RQrcode },
   data() {
@@ -144,6 +144,13 @@ export default {
           press:()=>{
             this.viewMe()
           }
+        },
+        {
+          type:'common_cell',
+          title:'R-vue-硬件',
+          press:()=>{
+            this.viewNative()
+          }
         }
       ]
     };
@@ -207,6 +214,11 @@ export default {
     viewMe(){
       this.$u.route({
         url:"pages/me/index"
+      })
+    },
+    viewNative(){
+      this.$u.route({
+        url:"pages/native/index"
       })
     }
   },

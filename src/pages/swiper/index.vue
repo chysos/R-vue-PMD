@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import RSubsection from "../subsection/R-subsection.vue";
-import RSwiper from "./R-swiper.vue";
+import RSubsection from "../../components/single_comp/R-subsection.vue";
+import RSwiper from "../../components/single_comp/R-swiper.vue";
 export default {
   components: { RSwiper, RSubsection },
   watch: {

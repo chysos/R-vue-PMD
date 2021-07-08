@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import RTabs from "./R-tabs.vue";
+import RTabs from "../../components/single_comp/R-tabs.vue";
 export default {
   components: { RTabs },
   computed: {

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RReadmore from "./R-Readmore.vue";
+import RReadmore from "@/components/single_comp/R-readmore.vue";
 export default {
   components: { RReadmore },
   data() {
