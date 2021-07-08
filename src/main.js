@@ -4,6 +4,12 @@ import App from './App'
 import uView from "uview-ui";
 import * as echarts from 'echarts';
 
+
+import RVue from './components'
+// 注册组件库
+Vue.use(RVue)
+
+
 import cuHeader from '../colorui/components/cu-header.vue'
 Vue.component('cu-header',cuHeader)
 

@@ -46,6 +46,7 @@
 
 <script>
 export default {
+  name:'RCard',
   props: {
     option: {
       type: Array,

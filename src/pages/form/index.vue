@@ -13,12 +13,7 @@
 </template>
 
 <script>
-import RForm from "@/components/forms/R-form.vue";
-//import {R_form} from '@/compoments/R-form';
 export default {
-  components: {
-    RForm,
-  },
   computed:{
 	form_data(){
 		return JSON.stringify(this.form);

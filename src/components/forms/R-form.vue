@@ -135,6 +135,7 @@
  * }
  */
 export default {
+  name:'RForm',
   props: {
     list: {
       type: Array,
