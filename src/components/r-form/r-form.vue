@@ -8,7 +8,6 @@
         :key="index"
         :prop="item.name"
       >
-
         <!--输入框-->
         <u-input
           v-if="item.type === 'common_input'"
@@ -57,6 +56,13 @@
           :disabled="true"
           @click="open_select_child(item.name)"
         />
+        <u-input
+          v-if="item.type === 'location'"
+          v-model="form[item.name]"
+          :placeholder="item.placeholder"
+          :disabled="true"
+          @click="location_select(item.name)"
+        />
         <!--按钮事件-->
         <u-button
           v-if="item.type === 'single_button'"
@@ -71,17 +77,29 @@
         ></u-rate>
         <u-radio-group v-if="item.type === 'radio'" v-model="form[item.name]">
           <u-radio
-            v-for="(i, index) in item.list"
-            :key="index"
+            v-for="(i, j) in item.list"
+            :key="j"
             :name="i.name"
             :disabled="item.disabled"
           >
             {{ i.name }}
           </u-radio>
         </u-radio-group>
-        <u-switch v-if="item.type === 'switch'" v-model="form[item.name]"></u-switch>
-        <u-slider class="r_slider" v-if="item.type === 'slider'" v-model="form[item.name]" :min="item.min" :max="item.max"></u-slider>
-        <u-number-box v-if="item.type === 'number-box'" v-model="form[item.name]"></u-number-box>
+        <u-switch
+          v-if="item.type === 'switch'"
+          v-model="form[item.name]"
+        ></u-switch>
+        <u-slider
+          class="r_slider"
+          v-if="item.type === 'slider'"
+          v-model="form[item.name]"
+          :min="item.min"
+          :max="item.max"
+        ></u-slider>
+        <u-number-box
+          v-if="item.type === 'number-box'"
+          v-model="form[item.name]"
+        ></u-number-box>
       </u-form-item>
     </u-form>
     <u-button @click="button_click">{{ button_title }}</u-button>
@@ -135,7 +153,7 @@
  * }
  */
 export default {
-  name:'RForm',
+  name: "RForm",
   props: {
     list: {
       type: Array,
@@ -242,6 +260,14 @@ export default {
     btn_click(name) {
       this.click_funcs[name](this);
     },
+    location_select(name) {
+      let context = this;
+      uni.chooseLocation({
+        success: function (res) {
+          context.form[name]=res.name + res.address;
+        },
+      });
+    },
   },
   watch: {
     form: {
@@ -294,7 +320,7 @@ export default {
   text-align: center;
   padding: 20rpx 0 0 0;
 }
-.r_slider{
+.r_slider {
   padding: 30rpx;
   width: 300rpx;
 }

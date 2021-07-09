@@ -100,25 +100,6 @@
 		"selectedColor": "#349AFD",
 		"backgroundColor": "#ffffff",
 		"list": [
-			{
-				"pagePath": "pages/equip/equip",
-				"iconPath": "static/tabBar/equip.png",
-				"selectedIconPath": "static/tabBar/equip2.png",
-				"text": "设备"
-			},
-			{
-				"pagePath": "pages/detect/detect",
-				"iconPath": "static/tabBar/detect.png",
-				"selectedIconPath": "static/tabBar/detect2.png",
-				"text": "巡检"
-			},
-			{
-				"pagePath": "pages/profile/profile",
-				"iconPath": "static/tabBar/me.png",
-				"selectedIconPath": "static/tabBar/me2.png",
-				"selectedColor": "#000",
-				"text": "我的"
-			}
 		]
 	}
 }

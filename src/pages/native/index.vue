@@ -1,104 +1,60 @@
 
 <template>
-    <view class="content">
-        <button type="primary" @click="checkIsSupportSoterAuthentication">检查支持的认证方式</button>
-        <button type="primary" @click="checkIsSoterEnrolledInDeviceFingerPrint">检查是否录入指纹</button>
-        <button type="primary" @click="checkIsSoterEnrolledInDeviceFaceID">检查是否录入FaceID</button>
-        <button type="primary" @click="startSoterAuthenticationFingerPrint">开始指纹认证</button>
-        <button type="primary" @click="startSoterAuthenticationFaceID">开始FaceID认证</button>
-    </view>
+  <view class="content">
+    <view class="u-line-5">指纹验证数据{{ rs }}</view>
+    <r-fingerprint
+      :option="option"
+      :resultJson.sync="buttonResultJson"
+      ref="fingerprint_ref"
+    >
+    </r-fingerprint>
+    <u-button @click="btn_click">开启验证</u-button>
+  </view>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-            }
+export default {
+  computed: {
+    rs() {
+      return JSON.stringify(this.buttonResultJson);
+    },
+  },
+  data() {
+    return {
+      buttonResultJson: {},
+      option: {
+        challenge: "adfadsfasdfasdf",
+        un_select_img: require("@/static/icons/14.png"),
+        select_img: require("@/static/icons/15.png"),
+        faild_img:require("@/static/icons/16.png"),
+        content: "指纹验证",
+        success_content: "验证成功",
+        error_content: "验证失败，请重试",
+      },
+    };
+  },
+  methods: {
+    btn_click() {
+      this.option.challenge = this.$u.guid()
+      this.$refs["fingerprint_ref"].showModal();
+    },
+    openMap() {
+      uni.chooseLocation({
+        success: function (res) {
+          console.log("位置名称：" + res.name);
+          console.log("详细地址：" + res.address);
+          console.log("纬度：" + res.latitude);
+          console.log("经度：" + res.longitude);
         },
-        onLoad() {
-
-        },
-        methods: {
-            checkIsSupportSoterAuthentication() {
-                uni.checkIsSupportSoterAuthentication({
-                    success(res) {
-                        console.log(res);
-                    },
-                    fail(err) {
-                        console.log(err);
-                    },
-                    complete(res) {
-                        console.log(res);
-                    }
-                })
-            },
-            checkIsSoterEnrolledInDeviceFingerPrint() {
-                uni.checkIsSoterEnrolledInDevice({
-                    checkAuthMode: 'fingerPrint',
-                    success(res) {
-                        console.log(res);
-                    },
-                    fail(err) {
-                        console.log(err);
-                    },
-                    complete(res) {
-                        console.log(res);
-                    }
-                })
-            },
-            checkIsSoterEnrolledInDeviceFaceID() {
-                uni.checkIsSoterEnrolledInDevice({
-                    checkAuthMode: 'facial',
-                    success(res) {
-                        console.log(res);
-                    },
-                    fail(err) {
-                        console.log(err);
-                    },
-                    complete(res) {
-                        console.log(res);
-                    }
-                })
-            },
-            startSoterAuthenticationFingerPrint() {
-                uni.startSoterAuthentication({
-                    requestAuthModes: ['fingerPrint'],
-                    challenge: '123456',
-                    authContent: '请用指纹解锁',
-                    success(res) {
-                        console.log(res);
-                    },
-                    fail(err) {
-                        console.log(err);
-                    },
-                    complete(res) {
-                        console.log(res);
-                    }
-                })
-            },
-            startSoterAuthenticationFaceID() {
-                uni.startSoterAuthentication({
-                    requestAuthModes: ['facial'],
-                    challenge: '123456',
-                    authContent: '请用FaceID解锁',
-                    success(res) {
-                        console.log(res);
-                    },
-                    fail(err) {
-                        console.log(err);
-                    },
-                    complete(res) {
-                        console.log(res);
-                    }
-                })
-            }
-        }
-    }
+      });
+    },
+  },
+};
 </script>
 
 <style>
-    button {
-        width: 200px;
-        margin: 20px auto;
-    }
+button {
+  width: 200px;
+  margin: 20px auto;
+}
 </style>

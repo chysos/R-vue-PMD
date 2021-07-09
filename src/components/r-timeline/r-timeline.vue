@@ -1,7 +1,8 @@
 <template>
   <u-time-line class="timeline-content">
     <u-time-line-item nodeTop="2" v-for="(item,index) in option.list" :key="index">
-      <template v-slot:node v-if="item.title || item.icon || index <= option.current">
+	
+      <template  v-slot:node >
         <view v-if="index <= option.current && item.icon!=undefined" class="u-node" :style="option.active_node_style">
           <u-icon :name="item.icon" color="#fff" :size="24"></u-icon>
         </view>
@@ -10,6 +11,7 @@
           <u-icon :name="item.icon" color="#fff" :size="24"></u-icon>
         </view>
       </template>
+	 
       <template v-slot:content>
         <view>
           <view class="u-order-title" v-if="item.title">{{item.title}}</view>
@@ -25,13 +27,19 @@
 
 <script>
 export default {
-  name:'RTimeline',
+  name:'r-timeline',
   props: {
     option: {
       type: Object,
       require: true,
     },
   },
+  methods:{
+	  isdot(a,b,c,d){
+		  return a!=undefined || b!=undefined || c <=d
+	  }
+	  //v-if="item.title || item.icon || index <= option.current"
+  }
 };
 </script>
 

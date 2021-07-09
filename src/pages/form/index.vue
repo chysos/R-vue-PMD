@@ -25,6 +25,12 @@ export default {
       title: "Hello R-vue",
       option: [
         {
+          type: 'location',
+          label: '位置选择',
+          name: 'my-location',
+          value: ''
+        },
+        {
           type: 'number-box',
           label: '数字',
           name: 'my-number-box',

@@ -19,8 +19,8 @@
       >
         <u-radio-group v-model="item.value">
           <u-radio
-            v-for="(u_item, index) in item.conf"
-            :key="index"
+            v-for="(u_item, index2) in item.conf"
+            :key="index2"
             :name="u_item.name"
             :disabled="u_item.disabled"
           >
@@ -34,8 +34,8 @@
       :arrow="item.arrow"
       @click="item.press"
       v-if="item.type === 'tags'">
-        <u-tag v-for="(i,index2) in item.list"
-        :key="index2" 
+        <u-tag v-for="(i,index3) in item.list"
+        :key="index3" 
         :text="i.text" 
         :mode="i.mode" />
       </u-cell-item>
