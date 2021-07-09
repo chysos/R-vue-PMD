@@ -1,4 +1,4 @@
-# run-app
+# rt-vue
 
 ## Project setup
 ```
@@ -17,3 +17,10 @@ yarn build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 使用方法
+```
+npm install rtvue i 
+
+yarn add rtvue 
+```
