@@ -87,6 +87,12 @@
 			"style":{
 				"navigationBarTitleText":"R-vue-native"
 			}
+		},
+		{
+			"path":"pages/vue/index",
+			"style":{
+				"navigationBarTitleText":"R-vue"
+			}
 		}
 	],
 	"globalStyle": {

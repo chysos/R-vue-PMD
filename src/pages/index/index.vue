@@ -148,6 +148,13 @@ export default {
           press:()=>{
             this.viewNative()
           }
+        },
+        {
+          type:'common_cell',
+          title:'R-vue-容器',
+          press:()=>{
+            this.viewVue()
+          }
         }
       ]
     };
@@ -216,6 +223,11 @@ export default {
     viewNative(){
       this.$u.route({
         url:"pages/native/index"
+      })
+    },
+    viewVue(){
+      this.$u.route({
+        url:"pages/vue/index"
       })
     }
   },

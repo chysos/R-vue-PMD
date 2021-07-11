@@ -1,7 +1,7 @@
 <template>
   <view class="content">
     <view>
-      <text class="title">form:{{ form_data }}</text>
+      <text class="u-line-5">form:{{ form_data }}</text>
       <r-form
         :list="option"
         @get_form_data="get_form_data"
@@ -14,10 +14,10 @@
 
 <script>
 export default {
-  computed:{
-	form_data(){
-		return JSON.stringify(this.form);
-	}  
+  computed: {
+    form_data() {
+      return JSON.stringify(this.form);
+    },
   },
   data() {
     return {
@@ -25,25 +25,25 @@ export default {
       title: "Hello R-vue",
       option: [
         {
-          type: 'location',
-          label: '位置选择',
-          name: 'my-location',
-          value: ''
+          type: "location",
+          label: "位置选择",
+          name: "my-location",
+          value: "",
         },
         {
-          type: 'number-box',
-          label: '数字',
-          name: 'my-number-box',
-          value: 25
+          type: "number-box",
+          label: "数字",
+          name: "my-number-box",
+          value: 25,
         },
         {
-          type: 'slider',
+          type: "slider",
           label: "滑块：",
-          max:'100',
-          min:'0',
-          step:'20',
-          name: 'my-slider',
-          value: 0
+          max: "100",
+          min: "0",
+          step: "20",
+          name: "my-slider",
+          value: 0,
         },
         {
           type: "common_input",
@@ -231,8 +231,8 @@ export default {
         {
           type: "radio",
           label: "单选框",
-          name:'my-radio',
-          value:'apple',
+          name: "my-radio",
+          value: "apple",
           list: [
             {
               name: "apple",
@@ -257,14 +257,14 @@ export default {
             {
               name: "admin",
               disabled: false,
-            }
+            },
           ],
         },
         {
-          type: 'switch',
+          type: "switch",
           label: "开关",
-          name: 'my-switch',
-          value: true
+          name: "my-switch",
+          value: true,
         },
       ],
     };
@@ -280,7 +280,6 @@ export default {
 </script>
 
 <style>
-
 .title {
   font-size: 10rpx;
   color: #8f8f94;
