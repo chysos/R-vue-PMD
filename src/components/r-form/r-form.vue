@@ -153,7 +153,7 @@
  * }
  */
 export default {
-  name: "RForm",
+  name: "r-form",
   props: {
     list: {
       type: Array,

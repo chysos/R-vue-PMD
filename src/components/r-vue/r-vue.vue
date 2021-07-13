@@ -6,7 +6,7 @@
         :option="item.option"></r-card>
       <r-cell
         v-if="item.type == 'r-cell'"
-        :option="item.option"
+        :list="item.option"
         :title="item.title"
       ></r-cell>
       <r-dropdown
@@ -26,7 +26,7 @@
       ></r-form>
       <r-grid v-if="item.type == 'r-grid'" :option="item.option"></r-grid>
       <r-map v-if="item.type == 'r-map'"></r-map>
-      <r-me :option="option" v-if="item.type == 'r-me'"></r-me>
+      <r-me :option="item.option" v-if="item.type == 'r-me'"></r-me>
       <r-qrcode v-if="item.type == 'r-qrcode'"></r-qrcode>
       <r-readmore v-if="item.type == 'r-readmore' " :option="item.option" :readmore_ref="$u.guid()"></r-readmore>
       <r-steps v-if="item.type == 'r-steps'" :option="item.option" ></r-steps>
@@ -34,6 +34,7 @@
       <r-swiper v-if="item.type == 'r-swiper'" :option="item.option"></r-swiper>
       <r-tabs v-if="item.type == 'r-tabs'" :option="item.option"></r-tabs>
       <r-timeline v-if="item.type == 'r-timeline'" :option="item.option"></r-timeline>
+      <r-menu v-if="item.type == 'r-menu'" :option="item.option"></r-menu>
     </view>
   </view>
 </template>

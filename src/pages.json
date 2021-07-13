@@ -93,6 +93,12 @@
 			"style":{
 				"navigationBarTitleText":"R-vue"
 			}
+		},
+		{
+			"path":"pages/menu/index",
+			"style":{
+				"navigationBarTitleText":"R-vue-menu"
+			}
 		}
 	],
 	"globalStyle": {

@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name:'RSwiper',
+  name:'r-swiper',
   props: {
     option: Object,
     require: true,

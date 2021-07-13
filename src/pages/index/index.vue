@@ -155,6 +155,13 @@ export default {
           press:()=>{
             this.viewVue()
           }
+        },
+        {
+          type:'common_cell',
+          title:'R-vue-menu',
+          press:()=>{
+            this.viewMenu();
+          }
         }
       ]
     };
@@ -228,6 +235,11 @@ export default {
     viewVue(){
       this.$u.route({
         url:"pages/vue/index"
+      })
+    },
+    viewMenu(){
+      this.$u.route({
+        url:'pages/menu/index'
       })
     }
   },
