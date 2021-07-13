@@ -162,6 +162,13 @@ export default {
           press:()=>{
             this.viewMenu();
           }
+        },
+        {
+          type:'common_cell',
+          title:'R-vue-image',
+          press:()=>{
+            this.viewImage();
+          }
         }
       ]
     };
@@ -240,6 +247,11 @@ export default {
     viewMenu(){
       this.$u.route({
         url:'pages/menu/index'
+      })
+    },
+    viewImage(){
+      this.$u.route({
+        url:'pages/image/index'
       })
     }
   },

@@ -99,6 +99,12 @@
 			"style":{
 				"navigationBarTitleText":"R-vue-menu"
 			}
+		},
+		{
+			"path":"pages/image/index",
+			"style":{
+				"navigationBarTitleText":"R-vue-image"
+			}
 		}
 	],
 	"globalStyle": {
