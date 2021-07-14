@@ -169,6 +169,13 @@ export default {
           press:()=>{
             this.viewImage();
           }
+        },
+        {
+          type:'common_cell',
+          title:'R-vue-raster',
+          press:()=>{
+            this.viewRaster();
+          }
         }
       ]
     };
@@ -252,6 +259,11 @@ export default {
     viewImage(){
       this.$u.route({
         url:'pages/image/index'
+      })
+    },
+    viewRaster(){
+      this.$u.route({
+        url:'pages/raster/index'
       })
     }
   },

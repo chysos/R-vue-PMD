@@ -105,6 +105,12 @@
 			"style":{
 				"navigationBarTitleText":"R-vue-image"
 			}
+		},
+		{
+			"path":"pages/raster/index",
+			"style":{
+				"navigationBarTitleText":"R-vue-raster"
+			}
 		}
 	],
 	"globalStyle": {

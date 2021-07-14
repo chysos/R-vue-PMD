@@ -1,7 +1,7 @@
 <template>
   <view class="wrap">
     <u-row gutter="16" justify="space-between">
-      <u-col span="3"></u-col>
+      <u-col :span="item.span" :style="item.style" v-for="(item,index) in option" :key="index" @click="item.click">{{item.text}}</u-col>
     </u-row>
   </view>
 </template>
@@ -11,7 +11,7 @@ export default {
     name:'r-raster',
     props:{
         option:{
-            type:Object,
+            type:Array,
             require:true
         }
     },
