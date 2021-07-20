@@ -840,6 +840,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@~7.12.0":
+  version "7.12.18"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.18.tgz#af137bd7e7d9705a412b3caaf991fe6aaa97831b"
+  integrity sha512-BogPQ7ciE6SYAUPtlm9tWbgI9+2AgqSam6QivMgXgAT+fKbgppaj4ZX15MHeLC1PVF5sNk70huBu20XxWOs8Cg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.10.4", "@babel/template@^7.12.7", "@babel/template@^7.3.3":
   version "7.12.7"
   resolved "https://registry.npm.taobao.org/@babel/template/download/@babel/template-7.12.7.tgz?cache=0&sync_timestamp=1605906405753&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Ftemplate%2Fdownload%2F%40babel%2Ftemplate-7.12.7.tgz#c817233696018e39fbb6c491d2fb684e05ed43bc"
@@ -891,15 +898,15 @@
   resolved "https://registry.npm.taobao.org/@dcloudio/types/download/@dcloudio/types-2.0.18.tgz?cache=0&sync_timestamp=1605585875373&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Ftypes%2Fdownload%2F%40dcloudio%2Ftypes-2.0.18.tgz#c62ffb2fce441081e4abee8d9e794bd38d308aeb"
   integrity sha1-xi/7L85EEIHkq+6NnnlL040wius=
 
-"@dcloudio/uni-app-plus@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-app-plus/download/@dcloudio/uni-app-plus-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862873622&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-app-plus%2Fdownload%2F%40dcloudio%2Funi-app-plus-2.0.0-29820201110001.tgz#644763e6c09a3ade523c813d83b50691608bf049"
-  integrity sha1-ZEdj5sCaOt5SPIE9g7UGkWCL8Ek=
+"@dcloudio/uni-app-plus@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-app-plus/-/uni-app-plus-2.0.0-31920210709003.tgz#bad1b8a98326fe5fc202e46d7758c96d55e90ad6"
+  integrity sha512-Vsn9e00ys87qdack++48u9b6bOzoIdKOPzUAjAclB/NA0gPOifdLN3Wt4X0qoV4qhQFbYrTIMKRGnaBeD/7tVw==
 
-"@dcloudio/uni-automator@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-automator/download/@dcloudio/uni-automator-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862828787&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-automator%2Fdownload%2F%40dcloudio%2Funi-automator-2.0.0-29820201110001.tgz#41750719291bcccc932a7a3765d995de6fe6b68c"
-  integrity sha1-QXUHGSkbzMyTKno3ZdmV3m/mtow=
+"@dcloudio/uni-automator@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-automator/-/uni-automator-2.0.0-31920210709003.tgz#e8c387afc9bd304da7112f1982c36a5511797ed2"
+  integrity sha512-yUErGjg8b5OXAEQjoea6EEyMzzb3haXqCgjGZTPgya5nZzV8b9T6WVrb52GqtlwRP5PpwiksCd76tg3jWO/F9A==
   dependencies:
     address "^1.1.2"
     debug "^4.1.1"
@@ -911,22 +918,23 @@
     qrcode-terminal "^0.12.0"
     ws "^7.2.3"
 
-"@dcloudio/uni-cli-shared@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-cli-shared/download/@dcloudio/uni-cli-shared-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862829436&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-cli-shared%2Fdownload%2F%40dcloudio%2Funi-cli-shared-2.0.0-29820201110001.tgz#0e2234fc56f815543a70027d440bc0c947fae112"
-  integrity sha1-DiI0/Fb4FVQ6cAJ9RAvAyUf64RI=
+"@dcloudio/uni-cli-shared@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-cli-shared/-/uni-cli-shared-2.0.0-31920210709003.tgz#f00b421ce0084a4cfc30f6973a2f0db1e33e96d9"
+  integrity sha512-+vhvwICopGkt6KG7/sCtq8sV+x0fD1NaMkSY9P5Zhh3W8Ezn0Mw6NOnCjR5v6unNwTwG0dJ2+Dh1uY2puaWbTQ==
   dependencies:
     hash-sum "^1.0.2"
     postcss-urlrewrite "^0.2.2"
     strip-json-comments "^2.0.1"
 
-"@dcloudio/uni-h5@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-h5/download/@dcloudio/uni-h5-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862831023&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-h5%2Fdownload%2F%40dcloudio%2Funi-h5-2.0.0-29820201110001.tgz#50cf14d5078c7fe7fed5755e0ebebf73154ebfc8"
-  integrity sha1-UM8U1QeMf+f+1XVeDr6/cxVOv8g=
+"@dcloudio/uni-h5@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-h5/-/uni-h5-2.0.0-31920210709003.tgz#c7a219532c555358adf14252e9d07013a953e00e"
+  integrity sha512-8Tga7zH9UK4ukSPbldXWXRBhoSXaaC1pU37pyXMBhcXsKjk8U20O5LeXKg5AfIefsfwxKG+RGdiV/l6HJ+U2GQ==
   dependencies:
     base64-arraybuffer "^0.2.0"
     intersection-observer "^0.7.0"
+    pako "^1.0.11"
     safe-area-insets "^1.4.1"
 
 "@dcloudio/uni-helper-json@*":
@@ -934,10 +942,15 @@
   resolved "https://registry.npm.taobao.org/@dcloudio/uni-helper-json/download/@dcloudio/uni-helper-json-1.0.9.tgz#f64c6b56b670406285c74922fd8158480bd8ebe9"
   integrity sha1-9kxrVrZwQGKFx0ki/YFYSAvY6+k=
 
-"@dcloudio/uni-migration@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-migration/download/@dcloudio/uni-migration-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862829063&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-migration%2Fdownload%2F%40dcloudio%2Funi-migration-2.0.0-29820201110001.tgz#d7c4c7a5064b8652c9dcf081da7b877328e3be38"
-  integrity sha1-18THpQZLhlLJ3PCB2nuHcyjjvjg=
+"@dcloudio/uni-i18n@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-i18n/-/uni-i18n-2.0.0-31920210709003.tgz#aa6cbd30bd070386df6009fb678f904826edcd71"
+  integrity sha512-mky1QinvxJ3CaqfHlbpVozHIN1IFFT9II38T2Ww4Qr5pPS77eBYv5FFnWb1DB5uwA3HruF/5qWQJAH7G85PGqg==
+
+"@dcloudio/uni-migration@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-migration/-/uni-migration-2.0.0-31920210709003.tgz#aa8e982aea2c718a8fdce3e009410d6b9d92b0cb"
+  integrity sha512-WADP2Frkw7TnZeWRX/WP5hNuoDPjCgL7heVYalz2KyQXf7HoprLWGslSBN9e/3cew4gOJDdJWciiWPE2tNXZpw==
   dependencies:
     commander "^4.0.1"
     fs-extra "^8.1.0"
@@ -945,91 +958,96 @@
     recast "*"
     stricter-htmlparser2 "^3.9.6"
 
-"@dcloudio/uni-mp-360@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-360/download/@dcloudio/uni-mp-360-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862582378&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-360%2Fdownload%2F%40dcloudio%2Funi-mp-360-2.0.0-29820201110001.tgz#22b71268a6eeb48a007bd40063d9a25fcb76b748"
-  integrity sha1-IrcSaKbutIoAe9QAY9miX8t2t0g=
+"@dcloudio/uni-mp-360@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-360/-/uni-mp-360-2.0.0-31920210709003.tgz#4dc402256cd4f243cb632273de4908d313f3f936"
+  integrity sha512-akM0AnRDFdg5P1/ZpgYMdXQFhHfi5EOFy+Bu3kG2NGtxkOB1YRODrHPoDGirQcWqKDXxoSbrdtb5zQHaI76AeQ==
 
-"@dcloudio/uni-mp-alipay@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-alipay/download/@dcloudio/uni-mp-alipay-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862830222&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-alipay%2Fdownload%2F%40dcloudio%2Funi-mp-alipay-2.0.0-29820201110001.tgz#90b9280aeab7c2576b4ead361a05ccea19e82362"
-  integrity sha1-kLkoCuq3wldrTq02GgXM6hnoI2I=
+"@dcloudio/uni-mp-alipay@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-alipay/-/uni-mp-alipay-2.0.0-31920210709003.tgz#813bf74e70894d21ef907a468f085c32f9387c31"
+  integrity sha512-QZjCtKNyGJGWKwHivmVN0u2vxupAFHcYgJ0/xvpUj+dzDw7uqzdN6niDBRc77H2qezRbq/NoATxhGjn8uV/wsA==
 
-"@dcloudio/uni-mp-baidu@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-baidu/download/@dcloudio/uni-mp-baidu-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862829434&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-baidu%2Fdownload%2F%40dcloudio%2Funi-mp-baidu-2.0.0-29820201110001.tgz#2d68f7a8570f947adf0f50c5af283c00e67768c4"
-  integrity sha1-LWj3qFcPlHrfD1DFryg8AOZ3aMQ=
+"@dcloudio/uni-mp-baidu@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-baidu/-/uni-mp-baidu-2.0.0-31920210709003.tgz#faaa0feba855da6d560d8ab1673b483bd58d5676"
+  integrity sha512-sedSRm4j6yjBIievg6XQSdXmP0eOCKx5Eyf8kFUteJPG0YKCN3aQAe7CQkND2bF/PfJN2z0QfQPbsLKbb+2pEQ==
 
-"@dcloudio/uni-mp-qq@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-qq/download/@dcloudio/uni-mp-qq-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862829963&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-qq%2Fdownload%2F%40dcloudio%2Funi-mp-qq-2.0.0-29820201110001.tgz#80a5130f577d28c0f7e22b53f04bd09095e99ea8"
-  integrity sha1-gKUTD1d9KMD34itT8EvQkJXpnqg=
+"@dcloudio/uni-mp-kuaishou@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-kuaishou/-/uni-mp-kuaishou-2.0.0-31920210709003.tgz#772ebae0f105df2b0668b701c9236f10a731ff2f"
+  integrity sha512-qqEVd1cVq2ACax0IIi+4XjXkLHQCd2wKCaIPjuHf9DnOTgSfxp11PqhpVQeAcy8aYiJVyNm+cPCWUFTEf5T0BA==
 
-"@dcloudio/uni-mp-toutiao@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-toutiao/download/@dcloudio/uni-mp-toutiao-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862830623&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-toutiao%2Fdownload%2F%40dcloudio%2Funi-mp-toutiao-2.0.0-29820201110001.tgz#dfe72660542cf5c51d7ddf8f3de7c1a3f6c3aef9"
-  integrity sha1-3+cmYFQs9cUdfd+PPefBo/bDrvk=
+"@dcloudio/uni-mp-qq@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-qq/-/uni-mp-qq-2.0.0-31920210709003.tgz#82c52782a49169609e56c1643fb0c7d3b4358b1d"
+  integrity sha512-T6K4QNEcKOMWaGs8H2oIa9g8ST6a3Bz8BlB2vnLv3EURpvDzTU+GfxBeEDw4uZhxrgVIO5AiOM0pqlBtfMOH2A==
 
-"@dcloudio/uni-mp-vue@^2.0.0-29820201110001":
-  version "2.0.0-alpha-29920201120001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-vue/download/@dcloudio/uni-mp-vue-2.0.0-alpha-29920201120001.tgz?cache=0&sync_timestamp=1605862829196&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-vue%2Fdownload%2F%40dcloudio%2Funi-mp-vue-2.0.0-alpha-29920201120001.tgz#24324fb771b7e841e1875e2caf4445db1ba64aa9"
-  integrity sha1-JDJPt3G36EHhh14sr0RF2xumSqk=
+"@dcloudio/uni-mp-toutiao@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-toutiao/-/uni-mp-toutiao-2.0.0-31920210709003.tgz#7c13e091c9c7fb1e61f15dc9bde28ac110543e27"
+  integrity sha512-eN0i1H4Wfgq7F26r/LGVZ+w7xzp95fpcnMfxaVK9xPbX+2ew7dJvjw5qyp1Mq/3VukYlPto4qopfNY8mA5Jxng==
 
-"@dcloudio/uni-mp-weixin@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-mp-weixin/download/@dcloudio/uni-mp-weixin-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862830751&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-mp-weixin%2Fdownload%2F%40dcloudio%2Funi-mp-weixin-2.0.0-29820201110001.tgz#5636b3ee328a3f1b58954808f0ea8273ffb7ab65"
-  integrity sha1-Vjaz7jKKPxtYlUgI8OqCc/+3q2U=
+"@dcloudio/uni-mp-vue@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-vue/-/uni-mp-vue-2.0.0-31920210709003.tgz#475dd3bdf17187a52670d6953200397e8fac328e"
+  integrity sha512-3HjN2ZcuR7mZ+wN5LeRgQ2ldl5eJEWHPKCup9JBcEhlxtYjkUcX+F/GHrbzito5I9PMeT6sXRTMmvxUowHV58g==
 
-"@dcloudio/uni-quickapp-native@^2.0.0-29820201110001":
-  version "2.0.0-alpha-29920201120001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-quickapp-native/download/@dcloudio/uni-quickapp-native-2.0.0-alpha-29920201120001.tgz?cache=0&sync_timestamp=1605862830273&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-quickapp-native%2Fdownload%2F%40dcloudio%2Funi-quickapp-native-2.0.0-alpha-29920201120001.tgz#08b50cbf2e8d7e3dc908e8624895f9a0df789f1e"
-  integrity sha1-CLUMvy6Nfj3JCOhiSJX5oN94nx4=
+"@dcloudio/uni-mp-weixin@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-mp-weixin/-/uni-mp-weixin-2.0.0-31920210709003.tgz#597a48e858dc08f38671d0f826b3d23120f9fbcb"
+  integrity sha512-PKUuxw0eMf4CwukiObdHmFaefQpb4acr2HRAxqqGUdsySdF458Sr2EYsD+ANuGvaZOOrnj3Zq60VW5NLe9Qv+w==
+
+"@dcloudio/uni-quickapp-native@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-quickapp-native/-/uni-quickapp-native-2.0.0-31920210709003.tgz#e50f154fba5b7c2c4ff96d3f9ba1078cbb5b3283"
+  integrity sha512-XqBGYT2h4PFTk7icDlN1CLsvE/ufQJi3yCcMK8M8xC2QfAtGU7AHJPkM/+PoFEWRHP8PTL0mYJZcYiUSy3ywAQ==
   dependencies:
     "@hap-toolkit/dsl-vue" "0.6.13"
     "@hap-toolkit/packager" "0.6.13"
     "@hap-toolkit/server" "0.6.13"
     module-alias "^2.1.0"
 
-"@dcloudio/uni-quickapp-webview@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-quickapp-webview/download/@dcloudio/uni-quickapp-webview-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862830249&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-quickapp-webview%2Fdownload%2F%40dcloudio%2Funi-quickapp-webview-2.0.0-29820201110001.tgz#d1b82587246ae0ba107fd52ff62da5673ba19ace"
-  integrity sha1-0bglhyRq4LoQf9Uv9i2lZzuhms4=
+"@dcloudio/uni-quickapp-webview@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-quickapp-webview/-/uni-quickapp-webview-2.0.0-31920210709003.tgz#25ebf926fc51f1a52e51ced54fbc272e018b0907"
+  integrity sha512-aOz9vwKlUFntvOBPoAU78lb7ES3eMOSW/cD/YHKG3AAl/F7/xEfMssacuOGmvu7eRIIf60ENvX9seVTp3qxilA==
 
-"@dcloudio/uni-stat@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-stat/download/@dcloudio/uni-stat-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605863530883&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-stat%2Fdownload%2F%40dcloudio%2Funi-stat-2.0.0-29820201110001.tgz#69231f1f19b68d7a3e673be2718e199a064ca75c"
-  integrity sha1-aSMfHxm2jXo+ZzvicY4ZmgZMp1w=
+"@dcloudio/uni-stat@^2.0.0-31920210609001", "@dcloudio/uni-stat@^2.0.0-31920210709003":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-stat/-/uni-stat-2.0.0-31920210709003.tgz#c3f911aa143697ed7524c0c37f15332b739fc15d"
+  integrity sha512-1KzuW1Azrk4rUy0qzlCQLZIzGGN7xet/Jbc3F/IjtXI9r46n/lGf2d47kGbkQe0WzZBkvFCXXU7NJlGDECwHdw==
 
-"@dcloudio/uni-template-compiler@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/uni-template-compiler/download/@dcloudio/uni-template-compiler-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862831383&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Funi-template-compiler%2Fdownload%2F%40dcloudio%2Funi-template-compiler-2.0.0-29820201110001.tgz#b6898018ddf34f25f430db74f54c0dac49750bff"
-  integrity sha1-tomAGN3zTyX0MNt09UwNrEl1C/8=
+"@dcloudio/uni-template-compiler@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/uni-template-compiler/-/uni-template-compiler-2.0.0-31920210709003.tgz#d80c767d37bff462b040f94660eb364377319e13"
+  integrity sha512-L3795i1eouhvB17SCWn7HTumBSyMtknsJWj7Bu1sxsFiWU9TWdUfAnwK9Xd6y6SPKEBV7jUDX7SOZcZCLlmjgg==
   dependencies:
     "@babel/parser" "^7.3.3"
     "@babel/traverse" "^7.3.3"
     "@babel/types" "^7.3.3"
     vue-template-compiler "^2.6.10"
 
-"@dcloudio/vue-cli-plugin-hbuilderx@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/vue-cli-plugin-hbuilderx/download/@dcloudio/vue-cli-plugin-hbuilderx-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605863431288&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Fvue-cli-plugin-hbuilderx%2Fdownload%2F%40dcloudio%2Fvue-cli-plugin-hbuilderx-2.0.0-29820201110001.tgz#51df470e7b2f04934562795043d7117cfbd5c031"
-  integrity sha1-Ud9HDnsvBJNFYnlQQ9cRfPvVwDE=
+"@dcloudio/vue-cli-plugin-hbuilderx@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/vue-cli-plugin-hbuilderx/-/vue-cli-plugin-hbuilderx-2.0.0-31920210709003.tgz#1b7a683dd29b92066894a52c0bcc14e22d829eb7"
+  integrity sha512-c4cjLPQIklOORIw2Coh7N2Q+LqiaLB96OMfXK1dlUej8dlSubKmp+prDclrFPs3nw/w0IAa2+4XDe6twmkQ/4A==
   dependencies:
     acorn "^5.2.1"
     css "~2.2.1"
     escodegen "^1.8.1"
 
-"@dcloudio/vue-cli-plugin-uni-optimize@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/vue-cli-plugin-uni-optimize/download/@dcloudio/vue-cli-plugin-uni-optimize-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605863443112&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Fvue-cli-plugin-uni-optimize%2Fdownload%2F%40dcloudio%2Fvue-cli-plugin-uni-optimize-2.0.0-29820201110001.tgz#66f0b9c7ea4877004c07a0377a1bf45d04293303"
-  integrity sha1-ZvC5x+pIdwBMB6A3ehv0XQQpMwM=
+"@dcloudio/vue-cli-plugin-uni-optimize@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/vue-cli-plugin-uni-optimize/-/vue-cli-plugin-uni-optimize-2.0.0-31920210709003.tgz#f134f1629eb59932a5155a7d9a914d5013e11494"
+  integrity sha512-h4i+tuwXDJ++7Whg61QB3rtxvbBHLR3C0hXnAwgfGBQaciqa2C+r+P4VZN2jZN6wWWt722PC7ibngwxwRmgXhA==
 
-"@dcloudio/vue-cli-plugin-uni@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/vue-cli-plugin-uni/download/@dcloudio/vue-cli-plugin-uni-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605863337337&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Fvue-cli-plugin-uni%2Fdownload%2F%40dcloudio%2Fvue-cli-plugin-uni-2.0.0-29820201110001.tgz#6863afa8058bdc73c57bf0f400e2c1653e249032"
-  integrity sha1-aGOvqAWL3HPFe/D0AOLBZT4kkDI=
+"@dcloudio/vue-cli-plugin-uni@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/vue-cli-plugin-uni/-/vue-cli-plugin-uni-2.0.0-31920210709003.tgz#69d68ea0370266e116e1a7dda6f71361f961e975"
+  integrity sha512-Hf5teGKHZ242pU5qSsgNJeUvFB0vxJr6ehwXzYaGh875cHjWs4V4/C4BwdrcgIof9NByg1UnzhTxRNnRrCYtpg==
   dependencies:
-    "@dcloudio/uni-stat" "^2.0.0-29820201110001"
+    "@dcloudio/uni-stat" "^2.0.0-31920210709003"
     buffer-json "^2.0.0"
     copy-webpack-plugin "^5.1.1"
     cross-env "^5.2.0"
@@ -1049,15 +1067,15 @@
     wrap-loader "^0.2.0"
     xregexp "4.0.0"
 
-"@dcloudio/webpack-uni-mp-loader@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/webpack-uni-mp-loader/download/@dcloudio/webpack-uni-mp-loader-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862860949&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Fwebpack-uni-mp-loader%2Fdownload%2F%40dcloudio%2Fwebpack-uni-mp-loader-2.0.0-29820201110001.tgz#f74a6586ad4ce79d2d0734314ce2251db11df9a7"
-  integrity sha1-90plhq1M550tBzQxTOIlHbEd+ac=
+"@dcloudio/webpack-uni-mp-loader@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/webpack-uni-mp-loader/-/webpack-uni-mp-loader-2.0.0-31920210709003.tgz#904524ec4e8fdb62f21ceae4dab7a89a3bd3052d"
+  integrity sha512-i+C/zpw5JH12fc6v1LBWH5kkzo2woMJFKkrZHBlSMFMPaxWYRYz3wrNNjVUfvAxVI8alK5TRqTVDrY2LRnuJmg==
 
-"@dcloudio/webpack-uni-pages-loader@^2.0.0-29820201110001":
-  version "2.0.0-29820201110001"
-  resolved "https://registry.npm.taobao.org/@dcloudio/webpack-uni-pages-loader/download/@dcloudio/webpack-uni-pages-loader-2.0.0-29820201110001.tgz?cache=0&sync_timestamp=1605862876300&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40dcloudio%2Fwebpack-uni-pages-loader%2Fdownload%2F%40dcloudio%2Fwebpack-uni-pages-loader-2.0.0-29820201110001.tgz#bc9d93e15c510e397b7062c3c712fccddc47145e"
-  integrity sha1-vJ2T4VxRDjl7cGLDxxL8zdxHFF4=
+"@dcloudio/webpack-uni-pages-loader@^2.0.0-31920210609001":
+  version "2.0.0-31920210709003"
+  resolved "https://registry.yarnpkg.com/@dcloudio/webpack-uni-pages-loader/-/webpack-uni-pages-loader-2.0.0-31920210709003.tgz#8153baa5d17d0f99f39b0eed25a45a46699b4783"
+  integrity sha512-NcRUZoES+Ovecv4FuQGoP35e1hl48B5m2/DMYtKnaoor/uzwu6m2mG/0ck8pSJ1dyyMy+z2Qo7ZOykFXIue4YA==
   dependencies:
     merge "^1.2.1"
     strip-json-comments "^2.0.1"
@@ -1598,7 +1616,7 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
-"@types/json-schema@^7.0.5", "@types/json-schema@^7.0.6":
+"@types/json-schema@^7.0.5":
   version "7.0.6"
   resolved "https://registry.npm.taobao.org/@types/json-schema/download/@types/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
   integrity sha1-9MfsQ+gbMZqYFRFQMXCfJph4kfA=
@@ -2242,7 +2260,7 @@ ajv-keywords@^3.1.0, ajv-keywords@^3.4.1, ajv-keywords@^3.5.2:
   resolved "https://registry.npm.taobao.org/ajv-keywords/download/ajv-keywords-3.5.2.tgz?cache=0&sync_timestamp=1605601436607&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fajv-keywords%2Fdownload%2Fajv-keywords-3.5.2.tgz#31f29da5ab6e00d1c2d329acf7b5929614d5014d"
   integrity sha1-MfKdpatuANHC0yms97WSlhTVAU0=
 
-ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4, ajv@^6.12.5:
+ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.npm.taobao.org/ajv/download/ajv-6.12.6.tgz?cache=0&sync_timestamp=1606043288618&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fajv%2Fdownload%2Fajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=
@@ -3937,11 +3955,6 @@ data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-dayjs@^1.9.6:
-  version "1.9.6"
-  resolved "https://registry.npm.taobao.org/dayjs/download/dayjs-1.9.6.tgz?cache=0&sync_timestamp=1604990379187&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdayjs%2Fdownload%2Fdayjs-1.9.6.tgz#6f0c77d76ac1ff63720dd1197e5cb87b67943d70"
-  integrity sha1-bwx312rB/2NyDdEZfly4e2eUPXA=
-
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/de-indent/download/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
@@ -4289,14 +4302,6 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-echarts@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.nlark.com/echarts/download/echarts-5.1.2.tgz#aa1ab0cef5b74fa2f7c620261a5f286893d30fd1"
-  integrity sha1-qhqwzvW3T6L3xiAmGl8oaJPTD9E=
-  dependencies:
-    tslib "2.0.3"
-    zrender "5.1.1"
-
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -4421,7 +4426,7 @@ envinfo@^6.0.1:
   resolved "https://registry.npm.taobao.org/envinfo/download/envinfo-6.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fenvinfo%2Fdownload%2Fenvinfo-6.0.1.tgz#dec51f2dd38fb4a1fb5bf568488c06ad1e7e08a7"
   integrity sha1-3sUfLdOPtKH7W/VoSIwGrR5+CKc=
 
-errno@^0.1.1, errno@^0.1.3, errno@~0.1.7:
+errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
   resolved "https://registry.npm.taobao.org/errno/download/errno-0.1.7.tgz#4684d71779ad39af177e3f007996f7c67c852618"
   integrity sha1-RoTXF3mtOa8Xfj8AeZb3xnyFJhg=
@@ -5563,11 +5568,6 @@ ignore@^4.0.3:
   resolved "https://registry.npm.taobao.org/ignore/download/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha1-dQ49tYYgh7RzfrrIIH/9HvJ7Jfw=
 
-image-size@~0.5.0:
-  version "0.5.5"
-  resolved "https://registry.npm.taobao.org/image-size/download/image-size-0.5.5.tgz?cache=0&sync_timestamp=1603728987431&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimage-size%2Fdownload%2Fimage-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
-  integrity sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=
-
 immediate@~3.0.5:
   version "3.0.6"
   resolved "https://registry.npm.taobao.org/immediate/download/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
@@ -6649,11 +6649,6 @@ kleur@^3.0.3:
   resolved "https://registry.npm.taobao.org/kleur/download/kleur-3.0.3.tgz?cache=0&sync_timestamp=1601440330796&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fkleur%2Fdownload%2Fkleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha1-p5yezIbuHOP6YgbRIWxQHxR/wH4=
 
-klona@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.npm.taobao.org/klona/download/klona-2.0.4.tgz?cache=0&sync_timestamp=1600226636423&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fklona%2Fdownload%2Fklona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
-  integrity sha1-e7Hjr/sMuGJFR+9+j2cI6i4538A=
-
 koa-body@^4.0.8:
   version "4.2.0"
   resolved "https://registry.npm.taobao.org/koa-body/download/koa-body-4.2.0.tgz#37229208b820761aca5822d14c5fc55cee31b26f"
@@ -6771,30 +6766,6 @@ launch-editor@^2.2.1:
   dependencies:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
-
-less-loader@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.npm.taobao.org/less-loader/download/less-loader-7.1.0.tgz?cache=0&sync_timestamp=1605095927771&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fless-loader%2Fdownload%2Fless-loader-7.1.0.tgz#958d41e86d7de0bcb490711ee0f235aa9dc596aa"
-  integrity sha1-lY1B6G194Ly0kHEe4PI1qp3Flqo=
-  dependencies:
-    klona "^2.0.4"
-    loader-utils "^2.0.0"
-    schema-utils "^3.0.0"
-
-less@^3.12.2:
-  version "3.12.2"
-  resolved "https://registry.npm.taobao.org/less/download/less-3.12.2.tgz?cache=0&sync_timestamp=1601388846547&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fless%2Fdownload%2Fless-3.12.2.tgz#157e6dd32a68869df8859314ad38e70211af3ab4"
-  integrity sha1-FX5t0ypohp34hZMUrTjnAhGvOrQ=
-  dependencies:
-    tslib "^1.10.0"
-  optionalDependencies:
-    errno "^0.1.1"
-    graceful-fs "^4.1.2"
-    image-size "~0.5.0"
-    make-dir "^2.1.0"
-    mime "^1.4.1"
-    native-request "^1.0.5"
-    source-map "~0.6.0"
 
 leven@^3.1.0:
   version "3.1.0"
@@ -7125,7 +7096,7 @@ mime-types@^2.1.12, mime-types@^2.1.18, mime-types@~2.1.17, mime-types@~2.1.19, 
   dependencies:
     mime-db "1.44.0"
 
-mime@1.6.0, mime@^1.4.1:
+mime@1.6.0:
   version "1.6.0"
   resolved "https://registry.npm.taobao.org/mime/download/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
   integrity sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=
@@ -7349,11 +7320,6 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-request@^1.0.5:
-  version "1.0.8"
-  resolved "https://registry.npm.taobao.org/native-request/download/native-request-1.0.8.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnative-request%2Fdownload%2Fnative-request-1.0.8.tgz#8f66bf606e0f7ea27c0e5995eb2f5d03e33ae6fb"
-  integrity sha1-j2a/YG4PfqJ8DlmV6y9dA+M65vs=
-
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -7450,10 +7416,10 @@ node-releases@^1.1.66:
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.67.tgz?cache=0&sync_timestamp=1605581400705&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.67.tgz#28ebfcccd0baa6aad8e8d4d8fe4cbc49ae239c12"
   integrity sha1-KOv8zNC6pqrY6NTY/ky8Sa4jnBI=
 
-node-sass-install@^1.0.2:
+node-sass-install@1.0.2:
   version "1.0.2"
-  resolved "https://registry.nlark.com/node-sass-install/download/node-sass-install-1.0.2.tgz#cf49b7e16ab9525f3f9add6f0ca9314ca2c9677b"
-  integrity sha1-z0m34Wq5Ul8/mt1vDKkxTKLJZ3s=
+  resolved "https://registry.yarnpkg.com/node-sass-install/-/node-sass-install-1.0.2.tgz#cf49b7e16ab9525f3f9add6f0ca9314ca2c9677b"
+  integrity sha512-sNyASXT1dL5YGq3DDTjB5KdmiJbRK0XnPy8GKKf/LHIZ7NcGZPsfALD0O7YJyUMJ9sArw9A6YQVv0hta79ZWqQ==
   dependencies:
     cross-spawn "^7.0.2"
     node-sass "npm:dart-sass@latest"
@@ -7780,10 +7746,10 @@ p-try@^2.0.0:
   resolved "https://registry.npm.taobao.org/p-try/download/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=
 
-pako@~1.0.2, pako@~1.0.5:
+pako@^1.0.11, pako@~1.0.2, pako@~1.0.5:
   version "1.0.11"
-  resolved "https://registry.npm.taobao.org/pako/download/pako-1.0.11.tgz?cache=0&sync_timestamp=1605741935029&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpako%2Fdownload%2Fpako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
-  integrity sha1-bJWZ00DVTf05RjgCUqNXBaa5kr8=
+  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
+  integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
 parallel-transform@^1.1.0:
   version "1.2.0"
@@ -9068,6 +9034,11 @@ rsvp@^4.8.4:
   resolved "https://registry.npm.taobao.org/rsvp/download/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
   integrity sha1-yPFVMR0Wf2jyHhaN9x7FsIMRNzQ=
 
+rtvue@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/rtvue/-/rtvue-0.0.2.tgz#cc4f6b06585570996531f0bd563982ae21b64523"
+  integrity sha512-GhIvllkgS2uE+dBihJGhjVwQM5S5RHkxH8V2kWiSetMK/GO3dVseA0SCGm7MwCOKTcPmXXf7LMgPTRbUKhdFQw==
+
 run-queue@^1.0.0, run-queue@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npm.taobao.org/run-queue/download/run-queue-1.0.3.tgz#e848396f057d223f24386924618e25694161ec47"
@@ -9157,15 +9128,6 @@ schema-utils@^2.0.0, schema-utils@^2.5.0, schema-utils@^2.6.5, schema-utils@^2.6
   dependencies:
     "@types/json-schema" "^7.0.5"
     ajv "^6.12.4"
-    ajv-keywords "^3.5.2"
-
-schema-utils@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/schema-utils/download/schema-utils-3.0.0.tgz?cache=0&sync_timestamp=1601922425223&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fschema-utils%2Fdownload%2Fschema-utils-3.0.0.tgz#67502f6aa2b66a2d4032b4279a2944978a0913ef"
-  integrity sha1-Z1AvaqK2ai1AMrQnmilEl4oJE+8=
-  dependencies:
-    "@types/json-schema" "^7.0.6"
-    ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
 select-hose@^2.0.0:
@@ -9825,14 +9787,6 @@ strip-json-comments@^2.0.1, strip-json-comments@~2.0.1:
   resolved "https://registry.npm.taobao.org/strip-json-comments/download/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-style-loader@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/style-loader/download/style-loader-2.0.0.tgz?cache=0&sync_timestamp=1615984430476&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstyle-loader%2Fdownload%2Fstyle-loader-2.0.0.tgz#9669602fd4690740eaaec137799a03addbbc393c"
-  integrity sha1-lmlgL9RpB0DqrsE3eZoDrdu8OTw=
-  dependencies:
-    loader-utils "^2.0.0"
-    schema-utils "^3.0.0"
-
 stylehacks@^4.0.0:
   version "4.0.3"
   resolved "https://registry.npm.taobao.org/stylehacks/download/stylehacks-4.0.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstylehacks%2Fdownload%2Fstylehacks-4.0.3.tgz#6718fcaf4d1e07d8a1318690881e8d96726a71d5"
@@ -10115,15 +10069,15 @@ ts-pnp@^1.1.6:
   resolved "https://registry.npm.taobao.org/ts-pnp/download/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha1-pQCtCEsHmPHDBxrzkeZZEshrypI=
 
-tslib@2.0.3, tslib@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.nlark.com/tslib/download/tslib-2.0.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
-  integrity sha1-jgdBrEX8DCJuWKF7/D5kubxsphw=
-
-tslib@^1.10.0, tslib@^1.9.0:
+tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1602286603545&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
+
+tslib@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.0.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.0.3.tgz#8e0741ac45fc0c226e58a17bfc3e64b9bc6ca61c"
+  integrity sha1-jgdBrEX8DCJuWKF7/D5kubxsphw=
 
 tsscmp@1.0.6:
   version "1.0.6"
@@ -10932,10 +10886,3 @@ ylru@^1.2.0:
   version "1.2.1"
   resolved "https://registry.npm.taobao.org/ylru/download/ylru-1.2.1.tgz#f576b63341547989c1de7ba288760923b27fe84f"
   integrity sha1-9Xa2M0FUeYnB3nuiiHYJI7J/6E8=
-
-zrender@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.nlark.com/zrender/download/zrender-5.1.1.tgz#0515f4f8cc0f4742f02a6b8819550a6d13d64c5c"
-  integrity sha1-BRX0+MwPR0LwKmuIGVUKbRPWTFw=
-  dependencies:
-    tslib "2.0.3"

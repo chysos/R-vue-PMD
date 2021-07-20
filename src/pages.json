@@ -1,7 +1,6 @@
 {
 	"easycom": {
-		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
-		"^r-(.*)": "@/components/r-$1/r-$1.vue"
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [
 		{
@@ -110,6 +109,18 @@
 			"path":"pages/raster/index",
 			"style":{
 				"navigationBarTitleText":"R-vue-raster"
+			}
+		},
+		{
+			"path":"pages/data/index",
+			"style":{
+				"navigationBarTitleText":"R-vue-charts"
+			}
+		},
+		{
+			"path":"pages/test/index",
+			"style":{
+				"navigationBarTitleText":"R-vue-test"
 			}
 		}
 	],

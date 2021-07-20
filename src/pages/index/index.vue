@@ -5,11 +5,21 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       option:[
+        {
+          icon: 'integral-fill',
+          type: 'common_cell',
+          title: "R-vue-test",
+          value: "查看",
+          arrow: true,
+          arrow_direction: 'down',
+          press:()=>{
+            this.viewTest()
+          }
+        },
         {
           icon: 'integral-fill',
           type: 'common_cell',
@@ -176,6 +186,13 @@ export default {
           press:()=>{
             this.viewRaster();
           }
+        },
+        {
+          type:'common_cell',
+          title:'R-vue-chart',
+          press:()=>{
+            this.viewTest();
+          }
         }
       ]
     };
@@ -264,6 +281,16 @@ export default {
     viewRaster(){
       this.$u.route({
         url:'pages/raster/index'
+      })
+    },
+    viewCharts(){
+      this.$u.route({
+        url:'pages/data/index'
+      })
+    },
+    viewTest(){
+      this.$u.route({
+        url:'pages/test/index'
       })
     }
   },

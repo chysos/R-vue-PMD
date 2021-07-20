@@ -1,1 +1,109 @@
-[{"type":"r-cell","option":[{"type":"common_cell","title":"名称","value":"数值","arrow":true,"arrow_direction":"down"},{"type":"tags","title":"标签","list":[{"text":"plain","mode":"plain"},{"text":"dark","mode":"dark"},{"text":"light","mode":"light"}]},{"type":"radio","title":"单选（是，否）","value":"是","arrow":false,"arrow_direction":"up","conf":[{"name":"是","disabled":false},{"name":"否","disabled":true},{"name":"不是","disabled":true},{"name":"第4个","disabled":true}]}]},{"type":"r-me","option":{"pic":"data:image/png;base64,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","username":"r-me","user_id":"123456789","show":true,"options":[[{"icon":"rmb-circle","type":"common_cell","title":"支付","value":"","arrow":true,"arrow_direction":"down"}],[{"icon":"star","type":"common_cell","title":"收藏","value":"","arrow":true,"arrow_direction":"down"},{"icon":"photo","type":"common_cell","title":"相册","value":"","arrow":true,"arrow_direction":"down"},{"icon":"coupon","type":"common_cell","title":"卡券","value":"","arrow":true,"arrow_direction":"down"},{"icon":"heart","type":"common_cell","title":"关注","value":"","arrow":true,"arrow_direction":"down"}],[{"icon":"setting","type":"common_cell","title":"设置","value":"","arrow":true,"arrow_direction":"down"}]]}},{"type":"r-image","option":{"src":"/static/img/4.69882731.jpg","width":"100%","height":"200px","shape":"square","borderRadius":0,"lazyLoad":true,"loadingIcon":"photo","errorIcon":"error-circle","showLoading":true,"showError":true,"fade":true,"webp":false,"duration":"500ms","bgColor":"#f3f4f6"}}]
+[
+    {
+        "type": "r-swiper",
+        "option": {
+            "title": true,
+            "mode": "round",
+            "height": 250,
+            "indicatorPos": "bottomCenter",
+            "effect3d": true,
+            "autoplay": true,
+            "interval": "1000",
+            "circular": true,
+            "duration": 500,
+            "borderRadius": 8,
+            "effect3dPreviousMargin": 50,
+            "imgMode": "aspectFill",
+            "name": "image",
+            "bgColor": "#f3f4f6",
+            "current": 0,
+            "list": [
+                {
+                    "image": "https://cdn.uviewui.com/uview/swiper/1.jpg",
+                    "title": "昨夜星辰昨夜风，画楼西畔桂堂东"
+                },
+                {
+                    "image": "https://cdn.uviewui.com/uview/swiper/2.jpg",
+                    "title": "身无彩凤双飞翼，心有灵犀一点通"
+                },
+                {
+                    "image": "https://cdn.uviewui.com/uview/swiper/3.jpg",
+                    "title": "谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳"
+                }
+            ]
+        }
+    },
+    {
+        "type": "r-cell",
+        "option": [
+            {
+                "type": "common_cell",
+                "title": "名称",
+                "value": "数值",
+                "arrow": true,
+                "arrow_direction": "down"
+            },
+            {
+                "type": "tags",
+                "title": "标签",
+                "list": [
+                    {
+                        "text": "plain",
+                        "mode": "plain"
+                    },
+                    {
+                        "text": "dark",
+                        "mode": "dark"
+                    },
+                    {
+                        "text": "light",
+                        "mode": "light"
+                    }
+                ]
+            },
+            {
+                "type": "radio",
+                "title": "单选（是，否）",
+                "value": "是",
+                "arrow": false,
+                "arrow_direction": "up",
+                "conf": [
+                    {
+                        "name": "是",
+                        "disabled": false
+                    },
+                    {
+                        "name": "否",
+                        "disabled": true
+                    },
+                    {
+                        "name": "不是",
+                        "disabled": true
+                    },
+                    {
+                        "name": "第4个",
+                        "disabled": true
+                    }
+                ]
+            }
+        ],
+        "title": "老师的课分级管理开始的1"
+    },{
+        "type":"r-form-input",
+        "option":{
+            "value":"123456789",
+            "label":"手机号",
+            "placeholder":"请输入手机号"
+        },
+        "compStyle":{
+            "height":"auto",
+            "width":"100%",
+            "font-size":"24rpx",
+            "background-color":"#fff",
+            "margin-top":"0",
+            "margin-right":"0",
+            "margin-down":"0",
+            "margin-left":"0"
+        }
+    }
+]

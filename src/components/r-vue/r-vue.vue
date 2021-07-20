@@ -1,22 +1,19 @@
 <template>
+<!--每个均增加ref-->
   <view>
     <view v-for="(item, index) in options" :key="index">
-      <r-card 
-        v-if="item.type == 'r-card'" 
-        :option="item.option"></r-card>
-      <r-cell
-        v-if="item.type == 'r-cell'"
+      <component :is="item.type" :option="item.option" :compStyle="item.compStyle"></component>
+      <!--修改属性-->
+      <r-cell v-if="item.type == 'r-cell'"
         :list="item.option"
         :title="item.title"
       ></r-cell>
-      <r-dropdown
-        v-if="item.type == 'r-dropdown'"
-        :option="item.option"
-        :dd_ref="$u.guid()"
-      ></r-dropdown>
+      <!--修改属性-->
+      <r-dropdown v-if="item.type == 'r-dropdown'" :option="item.option" :dd_ref="$u.guid()" ></r-dropdown>
       <r-fingerprint 
       :option="item.option" 
       v-if="item.type == 'r-fingerprint'"></r-fingerprint>
+      <!--修改属性-->
       <r-form
         v-if="item.type == 'r-form'"
         :list="item.option"
@@ -24,19 +21,15 @@
         :form_ref="$u.guid()"
         :form.sync="item.form"
       ></r-form>
+
       <r-grid v-if="item.type == 'r-grid'" :option="item.option"></r-grid>
+      <!--修改-->
       <r-map v-if="item.type == 'r-map'"></r-map>
       <r-me :option="item.option" v-if="item.type == 'r-me'"></r-me>
+      <!--修改-->
       <r-qrcode v-if="item.type == 'r-qrcode'"></r-qrcode>
+      <!--修改-->
       <r-readmore v-if="item.type == 'r-readmore' " :option="item.option" :readmore_ref="$u.guid()"></r-readmore>
-      <r-steps v-if="item.type == 'r-steps'" :option="item.option" ></r-steps>
-      <r-subsection v-if="item.type == 'r-subsection'" :option="item.option" ></r-subsection>
-      <r-swiper v-if="item.type == 'r-swiper'" :option="item.option"></r-swiper>
-      <r-tabs v-if="item.type == 'r-tabs'" :option="item.option"></r-tabs>
-      <r-timeline v-if="item.type == 'r-timeline'" :option="item.option"></r-timeline>
-      <r-menu v-if="item.type == 'r-menu'" :option="item.option"></r-menu>
-      <r-image v-if="item.type=='r-image'" :option="item.option"></r-image>
-      <r-raster v-if="item.type=='r-raster'" :option="item.option"></r-raster>
     </view>
   </view>
 </template>
